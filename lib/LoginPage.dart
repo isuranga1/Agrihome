@@ -13,7 +13,7 @@ class _LoginPageState extends State<LoginPage> {
   Widget build(BuildContext context) {
     return Scaffold(
         body: Container(
-      child: Text("Hello"),
+      child: Center(child: Text("Hello")),
     ));
   }
 }

@@ -42,7 +42,12 @@ class _FirstScreenState extends State<FirstScreen> {
               SizedBox(height: 110),
               InkWell(
                 onTap: () {
-                  Get.to(() => LoginPage());
+                  Navigator.of(context).push(
+                    MaterialPageRoute(
+                      builder: (BuildContext context) => const LoginPage(),
+                    ),
+                  );
+                  //Get.to(() => const LoginPage());
                 },
                 child: Container(
                   width: MediaQuery.of(context).size.width,
