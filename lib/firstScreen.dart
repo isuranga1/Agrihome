@@ -56,8 +56,8 @@ class _FirstScreenState extends State<FirstScreen> {
                       borderRadius: BorderRadius.circular(100),
                       gradient: const LinearGradient(
                           colors: [
-                            Color(0xFF558B2F),
-                            Color(0xFF8BC34A),
+                            Color.fromRGBO(36, 150, 126, 1),
+                            Color.fromRGBO(139, 195, 74, 1),
                           ],
                           begin: Alignment.centerRight,
                           end: Alignment.centerLeft)),
