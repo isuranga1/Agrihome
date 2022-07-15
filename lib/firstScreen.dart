@@ -46,7 +46,7 @@ class _FirstScreenState extends State<FirstScreen> {
                 },
                 child: Container(
                   width: MediaQuery.of(context).size.width,
-                  height: 40,
+                  height: 50,
                   decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(100),
                       gradient: LinearGradient(
