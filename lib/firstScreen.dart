@@ -21,7 +21,7 @@ class _FirstScreenState extends State<FirstScreen> {
           width: MediaQuery.of(context).size.width,
           child: Column(
             children: [
-              Text(
+              const Text(
                 "Let's Plant With Us",
                 style: TextStyle(
                   fontSize: 25,
@@ -30,16 +30,16 @@ class _FirstScreenState extends State<FirstScreen> {
                 ),
               ),
               Container(
-                margin: EdgeInsets.only(top: 80),
+                margin: const EdgeInsets.only(top: 80),
                 width: 250,
                 height: 280,
-                decoration: BoxDecoration(
+                decoration: const BoxDecoration(
                     //color: Colors.redAccent,
                     image: DecorationImage(
                         image: AssetImage("assets/imgs/agriHomeLogo.png"),
                         fit: BoxFit.fill)),
               ),
-              SizedBox(height: 110),
+              const SizedBox(height: 110),
               InkWell(
                 onTap: () {
                   Navigator.of(context).push(
@@ -54,7 +54,7 @@ class _FirstScreenState extends State<FirstScreen> {
                   height: 50,
                   decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(100),
-                      gradient: LinearGradient(
+                      gradient: const LinearGradient(
                           colors: [
                             Color.fromRGBO(36, 150, 126, 1),
                             Color.fromRGBO(139, 195, 74, 1),
@@ -63,7 +63,7 @@ class _FirstScreenState extends State<FirstScreen> {
                           end: Alignment.centerLeft)),
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.center,
-                    children: [
+                    children: const [
                       Text(
                         "Get Started",
                         style: TextStyle(
