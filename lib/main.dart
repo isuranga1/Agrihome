@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'bttmnavbar.dart';
 import 'firstScreen.dart';
 
 void main() {
@@ -17,7 +18,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.brown,
       ),
-      home: const FirstScreen(),
+      home: const BtmNavBar(),
     );
   }
 }
