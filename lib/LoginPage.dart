@@ -19,7 +19,7 @@ class _LoginPageState extends State<LoginPage> {
       body: Column(
         children: [
           const SizedBox(
-            height: 62,
+            height: 37,
           ),
           Image.asset("assets/imgs/loginpic.png"),
           //photo
