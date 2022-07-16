@@ -34,11 +34,14 @@ class _LoginPageState extends State<LoginPage> {
             style: TextStyle(
               fontWeight: FontWeight.bold,
               fontSize: 24,
+              color: Color(value)
             ),
           ),
           //photo(text danta)
           TextField(
-            decoration: InputDecoration(border: InputBorder.none),
+            decoration: InputDecoration(
+              border: InputBorder.none,
+            ),
           )
           //login textfield
 
