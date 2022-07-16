@@ -6,6 +6,11 @@ class MarketPlace extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(home: Scaffold(appbar:Appar()));
+    return MaterialApp(
+        home: Scaffold(
+            appBar: AppBar(
+                backgroundColor: Colors.transparent,
+                elevation: 0,
+                leading: Text('Shop with us'))));
   }
 }

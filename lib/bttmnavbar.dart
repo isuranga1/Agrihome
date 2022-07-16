@@ -2,6 +2,7 @@ import 'package:agrihome/profile.dart';
 import 'package:agrihome/homeScreen.dart';
 import 'package:flutter/material.dart';
 import 'package:fluentui_icons/fluentui_icons.dart';
+import 'market.dart';
 
 /*class BottomNavBar extends StatefulWidget {
   BottomNavBar(
