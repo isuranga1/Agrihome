@@ -1,5 +1,6 @@
+import 'package:agrihome/home_screen_head.dart';
 import 'package:agrihome/profile.dart';
-import 'package:agrihome/homeScreen.dart';
+import 'package:agrihome/home_screen_body.dart';
 import 'package:flutter/material.dart';
 import 'package:fluentui_icons/fluentui_icons.dart';
 
@@ -45,7 +46,7 @@ class BtmNavBar extends StatefulWidget {
 class _BtmNavBarState extends State<BtmNavBar> {
   int _selectedIndex = 0;
   static final List<Widget> _widgetOptions = <Widget>[
-    HomeScreen(),
+    HomeScreenHead(),
     const Text("Gallery"),
     const Text("Plant Shopping"),
     Profile(),
