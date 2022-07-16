@@ -13,8 +13,7 @@ class _HomeScreenBodyState extends State<HomeScreenBody> {
   @override
   Widget build(BuildContext context) {
     return Container(
-      color: Colors.yellow,
-      height: 260,
+      height: 270,
       child: PageView.builder(
           controller: pageController,
           itemCount: 5,
@@ -28,7 +27,8 @@ class _HomeScreenBodyState extends State<HomeScreenBody> {
     return Stack(
       children: [
         Container(
-          height: 220,
+          height: 250,
+          width: MediaQuery.of(context).size.width,
           margin: EdgeInsets.only(left: 5, right: 5),
           decoration: BoxDecoration(
               borderRadius: BorderRadius.circular(30),
