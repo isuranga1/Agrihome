@@ -1,7 +1,7 @@
 import 'package:agrihome/utils/colors.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'LoginPage.dart';
+import 'Login_folder/LoginPage.dart';
 
 class FirstScreen extends StatefulWidget {
   const FirstScreen({Key? key}) : super(key: key);
@@ -44,7 +44,7 @@ class _FirstScreenState extends State<FirstScreen> {
                 onTap: () {
                   Navigator.of(context).push(
                     MaterialPageRoute(
-                      builder: (BuildContext context) => const LoginPage(),
+                      builder: (BuildContext context) => LoginPage(),
                     ),
                   );
                   //Get.to(() => const LoginPage());

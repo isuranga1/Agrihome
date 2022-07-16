@@ -1,3 +1,5 @@
+import 'package:agrihome/Login_folder/LoginPage.dart';
+import 'package:agrihome/firstScreen.dart';
 import 'package:flutter/material.dart';
 import 'bttmnavbar.dart';
 import 'home_screen_head.dart';
@@ -16,9 +18,13 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       title: 'Flutter Demo',
       theme: ThemeData(
-        primarySwatch: Colors.brown,
+        primarySwatch: Colors.green,
       ),
+<<<<<<< Updated upstream
       home: BtmNavBar(),
+=======
+      home: FirstScreen(),
+>>>>>>> Stashed changes
     );
   }
 }
