@@ -1,3 +1,4 @@
+import 'package:agrihome/utils/colors.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'LoginPage.dart';
@@ -53,10 +54,10 @@ class _FirstScreenState extends State<FirstScreen> {
                   height: 50,
                   decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(100),
-                      gradient: const LinearGradient(
+                      gradient: LinearGradient(
                           colors: [
-                            Color.fromRGBO(36, 150, 126, 1),
-                            Color.fromRGBO(139, 195, 74, 1),
+                            AppColors.darkGreen,
+                            AppColors.lightGreen,
                           ],
                           begin: Alignment.centerRight,
                           end: Alignment.centerLeft)),

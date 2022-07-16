@@ -9,12 +9,14 @@ class HomeScreenBody extends StatefulWidget {
 }
 
 class _HomeScreenBodyState extends State<HomeScreenBody> {
+  PageController pageController = PageController(viewportFraction: 0.65);
   @override
   Widget build(BuildContext context) {
     return Container(
-      //color: Colors.red,
-      height: 210,
+      color: Colors.yellow,
+      height: 260,
       child: PageView.builder(
+          controller: pageController,
           itemCount: 5,
           itemBuilder: (context, position) {
             return _buildPageItem(position);
@@ -23,14 +25,29 @@ class _HomeScreenBodyState extends State<HomeScreenBody> {
   }
 
   Widget _buildPageItem(int index) {
-    return Container(
-      //height: 120,
-      margin: EdgeInsets.only(left: 5, right: 5),
-      decoration: BoxDecoration(
-          borderRadius: BorderRadius.circular(30),
-          color: Color(0xFF69c5df),
-          image: DecorationImage(
-              fit: BoxFit.cover, image: AssetImage("assets/imgs/pic1.jpg"))),
+    return Stack(
+      children: [
+        Container(
+          height: 220,
+          margin: EdgeInsets.only(left: 5, right: 5),
+          decoration: BoxDecoration(
+              borderRadius: BorderRadius.circular(30),
+              image: DecorationImage(
+                  fit: BoxFit.cover,
+                  image: AssetImage("assets/imgs/pic1.jpg"))),
+        ),
+        Align(
+          alignment: Alignment.bottomCenter,
+          child: Container(
+            height: 100,
+            margin: EdgeInsets.only(left: 20, right: 20),
+            decoration: BoxDecoration(
+              borderRadius: BorderRadius.circular(30),
+              color: Colors.redAccent,
+            ),
+          ),
+        ),
+      ],
     );
   }
 }

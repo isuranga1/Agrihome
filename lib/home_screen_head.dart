@@ -1,3 +1,4 @@
+import 'package:agrihome/utils/colors.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'home_screen_body.dart';
@@ -23,7 +24,7 @@ class _HomeScreenHeadState extends State<HomeScreenHead> {
               style: TextStyle(
                 fontSize: 23,
                 fontWeight: FontWeight.bold,
-                color: Color(0xFF388E3C),
+                color: Color.fromRGBO(36, 150, 126, 1),
               ),
             ),
             SizedBox(
