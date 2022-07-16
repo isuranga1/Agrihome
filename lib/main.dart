@@ -1,7 +1,4 @@
-import 'package:agrihome/home_screen_body.dart';
 import 'package:flutter/material.dart';
-import 'bttmnavbar.dart';
-import 'firstScreen.dart';
 import 'home_screen_head.dart';
 
 void main() {
