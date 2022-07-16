@@ -20,11 +20,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.green,
       ),
-<<<<<<< Updated upstream
-      home: BtmNavBar(),
-=======
       home: FirstScreen(),
->>>>>>> Stashed changes
     );
   }
 }
