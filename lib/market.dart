@@ -1,9 +1,14 @@
-import 'homeScreen.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
-class MarketPlace extends StatelessWidget {
-  const MarketPlace({Key? key}) : super(key: key);
+class Market extends StatefulWidget {
+  const Market({Key? key}) : super(key: key);
 
+  @override
+  State<Market> createState() => _MarketState();
+}
+
+class _MarketState extends State<Market> {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
