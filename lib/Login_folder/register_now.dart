@@ -157,7 +157,7 @@ class _RegisterNowState extends State<RegisterNow> {
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
                       Text(
-                        "Sign In",
+                        "Sign Up",
                         style: TextStyle(
                           color: Colors.white,
                           fontWeight: FontWeight.bold,
