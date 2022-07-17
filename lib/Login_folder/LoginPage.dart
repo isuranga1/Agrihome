@@ -24,9 +24,7 @@ class _LoginPageState extends State<LoginPage> {
       body: SingleChildScrollView(
         child: Column(
           children: [
-            const SizedBox(
-              height: 37,
-            ),
+            const SizedBox(height: 37),
             Image.asset("assets/imgs/loginpic.png"),
             //photo
             const SizedBox(height: 80),
@@ -107,7 +105,7 @@ class _LoginPageState extends State<LoginPage> {
                 ),
               ),
             ),
-
+            //Sign in
             const SizedBox(height: 10),
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
@@ -132,6 +130,7 @@ class _LoginPageState extends State<LoginPage> {
                 ),
               ],
             )
+            //register
           ],
         ),
       ),

@@ -31,6 +31,7 @@ class _RegisterNowState extends State<RegisterNow> {
                 ),
               ),
             ),
+            //hello again
             Center(
               child: Container(
                 height: 150,
@@ -38,6 +39,7 @@ class _RegisterNowState extends State<RegisterNow> {
                 child: Image.asset('assets/imgs/agriHomeLogo.png'),
               ),
             ),
+            //logo
             Center(
               child: Text(
                 "Let's get started with a free account !!",
@@ -47,6 +49,7 @@ class _RegisterNowState extends State<RegisterNow> {
                 ),
               ),
             ),
+            //lets get started
             SizedBox(height: 50),
             Padding(
               padding: const EdgeInsets.symmetric(horizontal: 25),
@@ -67,6 +70,7 @@ class _RegisterNowState extends State<RegisterNow> {
                 ),
               ),
             ),
+            //your name
             SizedBox(height: 15),
             Padding(
               padding: const EdgeInsets.symmetric(horizontal: 25),
@@ -87,6 +91,7 @@ class _RegisterNowState extends State<RegisterNow> {
                 ),
               ),
             ),
+            //email
             SizedBox(height: 15),
             Padding(
               padding: const EdgeInsets.symmetric(horizontal: 25),
@@ -108,6 +113,7 @@ class _RegisterNowState extends State<RegisterNow> {
                 ),
               ),
             ),
+            //password
             SizedBox(height: 15),
             Padding(
               padding: const EdgeInsets.symmetric(horizontal: 25),
@@ -129,6 +135,7 @@ class _RegisterNowState extends State<RegisterNow> {
                 ),
               ),
             ),
+            //confirm password
             const SizedBox(height: 15),
             Padding(
               padding: const EdgeInsets.symmetric(horizontal: 25.0),
@@ -163,6 +170,7 @@ class _RegisterNowState extends State<RegisterNow> {
                 ),
               ),
             ),
+            //sign up
           ],
         ),
       ),
