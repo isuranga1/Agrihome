@@ -1,7 +1,9 @@
+import 'package:agrihome/Login_folder/LoginPage.dart';
 import 'package:flutter/material.dart';
 import 'dart:ui';
 import 'package:flutter/cupertino.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'LoginPage.dart';
 
 class RegisterNow extends StatefulWidget {
   RegisterNow({Key? key}) : super(key: key);
@@ -29,6 +31,7 @@ class _RegisterNowState extends State<RegisterNow> {
                 ),
               ),
             ),
+            //hello again
             Center(
               child: Container(
                 height: 150,
@@ -36,6 +39,7 @@ class _RegisterNowState extends State<RegisterNow> {
                 child: Image.asset('assets/imgs/agriHomeLogo.png'),
               ),
             ),
+            //logo
             Center(
               child: Text(
                 "Let's get started with a free account !!",
@@ -45,6 +49,7 @@ class _RegisterNowState extends State<RegisterNow> {
                 ),
               ),
             ),
+            //lets get started
             SizedBox(height: 50),
             Padding(
               padding: const EdgeInsets.symmetric(horizontal: 25),
@@ -65,6 +70,7 @@ class _RegisterNowState extends State<RegisterNow> {
                 ),
               ),
             ),
+            //your name
             SizedBox(height: 15),
             Padding(
               padding: const EdgeInsets.symmetric(horizontal: 25),
@@ -85,6 +91,7 @@ class _RegisterNowState extends State<RegisterNow> {
                 ),
               ),
             ),
+            //email
             SizedBox(height: 15),
             Padding(
               padding: const EdgeInsets.symmetric(horizontal: 25),
@@ -106,6 +113,7 @@ class _RegisterNowState extends State<RegisterNow> {
                 ),
               ),
             ),
+            //password
             SizedBox(height: 15),
             Padding(
               padding: const EdgeInsets.symmetric(horizontal: 25),
@@ -127,28 +135,41 @@ class _RegisterNowState extends State<RegisterNow> {
                 ),
               ),
             ),
+            //confirm password
             const SizedBox(height: 15),
             Padding(
               padding: const EdgeInsets.symmetric(horizontal: 25.0),
-              child: Container(
-                padding: EdgeInsets.all(20),
-                decoration: BoxDecoration(
-                  color: Colors.green,
-                  borderRadius: BorderRadius.circular(15),
-                ),
-                child: const Center(
-                  child: Text(
-                    "Sign Up",
-                    style: TextStyle(
-                      color: Colors.white,
-                      fontWeight: FontWeight.bold,
-                      fontSize: 18,
+              child: GestureDetector(
+                onTap: () {
+                  Navigator.of(context).push(
+                    MaterialPageRoute(
+                      builder: (BuildContext context) => LoginPage(),
                     ),
+                  );
+                },
+                child: Container(
+                  padding: EdgeInsets.all(20),
+                  decoration: BoxDecoration(
+                    color: Colors.green,
+                    borderRadius: BorderRadius.circular(15),
+                  ),
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      Text(
+                        "Sign In",
+                        style: TextStyle(
+                          color: Colors.white,
+                          fontWeight: FontWeight.bold,
+                          fontSize: 18,
+                        ),
+                      ),
+                    ],
                   ),
                 ),
               ),
             ),
-
+            //sign up
           ],
         ),
       ),

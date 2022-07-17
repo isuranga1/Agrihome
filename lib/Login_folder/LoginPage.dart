@@ -1,8 +1,10 @@
 import 'dart:ui';
 
+import 'package:agrihome/home_screen_head.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:agrihome/home_screen_head.dart';
 
 import 'register_now.dart';
 
@@ -22,9 +24,7 @@ class _LoginPageState extends State<LoginPage> {
       body: SingleChildScrollView(
         child: Column(
           children: [
-            //const SizedBox(
-            //  height: 37,
-            //),
+            const SizedBox(height: 37),
             Image.asset("assets/imgs/loginpic.png"),
             //photo
             const SizedBox(height: 80),
@@ -37,7 +37,7 @@ class _LoginPageState extends State<LoginPage> {
                   borderRadius: BorderRadius.circular(15),
                 ),
                 child: const Padding(
-                  padding: EdgeInsets.only(left: 10),
+                  padding: EdgeInsets.only(left: 8),
                   child: TextField(
                     decoration: InputDecoration(
                       border: InputBorder.none,
@@ -58,7 +58,7 @@ class _LoginPageState extends State<LoginPage> {
                   borderRadius: BorderRadius.circular(15),
                 ),
                 child: const Padding(
-                  padding: EdgeInsets.only(left: 10),
+                  padding: EdgeInsets.only(left: 8),
                   child: TextField(
                     obscureText: true,
                     decoration: InputDecoration(
@@ -73,25 +73,37 @@ class _LoginPageState extends State<LoginPage> {
             const SizedBox(height: 15),
             Padding(
               padding: const EdgeInsets.symmetric(horizontal: 25.0),
-              child: Container(
-                padding: EdgeInsets.all(20),
-                decoration: BoxDecoration(
-                  color: Colors.green,
-                  borderRadius: BorderRadius.circular(15),
-                ),
-                child: const Center(
-                  child: Text(
-                    "Sign In",
-                    style: TextStyle(
-                      color: Colors.white,
-                      fontWeight: FontWeight.bold,
-                      fontSize: 18,
+              child: GestureDetector(
+                onTap: () {
+                  Navigator.of(context).push(
+                    MaterialPageRoute(
+                      builder: (BuildContext context) => HomeScreenHead(),
                     ),
+                  );
+                },
+                child: Container(
+                  padding: EdgeInsets.all(20),
+                  decoration: BoxDecoration(
+                    color: Colors.green,
+                    borderRadius: BorderRadius.circular(15),
+                  ),
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      Text(
+                        "Sign In",
+                        style: TextStyle(
+                          color: Colors.white,
+                          fontWeight: FontWeight.bold,
+                          fontSize: 18,
+                        ),
+                      ),
+                    ],
                   ),
                 ),
               ),
             ),
-
+            //Sign in
             const SizedBox(height: 10),
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
@@ -116,6 +128,7 @@ class _LoginPageState extends State<LoginPage> {
                 ),
               ],
             )
+            //register
           ],
         ),
       ),
