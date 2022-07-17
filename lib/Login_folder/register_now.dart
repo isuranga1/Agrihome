@@ -23,6 +23,7 @@ class _RegisterNowState extends State<RegisterNow> {
               child: Text(
                 "Hello again,",
                 style: GoogleFonts.openSans(
+                  color: Colors.green,
                   fontSize: 30,
                   fontWeight: FontWeight.bold,
                 ),
@@ -38,7 +39,10 @@ class _RegisterNowState extends State<RegisterNow> {
             Center(
               child: Text(
                 "Let's get started with a free account !!",
-                style: GoogleFonts.openSans(),
+                style: GoogleFonts.openSans(
+                  color: Colors.green,
+                  fontWeight: FontWeight.bold,
+                ),
               ),
             ),
             SizedBox(height: 50),
@@ -123,6 +127,28 @@ class _RegisterNowState extends State<RegisterNow> {
                 ),
               ),
             ),
+            const SizedBox(height: 15),
+            Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 25.0),
+              child: Container(
+                padding: EdgeInsets.all(20),
+                decoration: BoxDecoration(
+                  color: Colors.green,
+                  borderRadius: BorderRadius.circular(15),
+                ),
+                child: const Center(
+                  child: Text(
+                    "Sign Up",
+                    style: TextStyle(
+                      color: Colors.white,
+                      fontWeight: FontWeight.bold,
+                      fontSize: 18,
+                    ),
+                  ),
+                ),
+              ),
+            ),
+
           ],
         ),
       ),
