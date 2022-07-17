@@ -30,7 +30,7 @@ dependencies:
   flutter:
     sdk: flutter
   dots_indicator: ^2.1.0
-
+  flutter_launcher_icons: ^0.9.3
 
   # The following adds the Cupertino Icons font to your application.
   # Use with the CupertinoIcons class for iOS style icons.
@@ -43,6 +43,17 @@ dependencies:
 dev_dependencies:
   flutter_test:
     sdk: flutter
+  flutter_launcher_icons: "^0.9.2"  
+
+  flutter_app_name: ^0.1.0
+
+flutter_app_name:
+  name: "AgriHome"
+
+flutter_icons:
+  android: true
+  ios: true
+  image_path: "assets/imgs/agriHomeLogo.png"
 
   # The "flutter_lints" package below contains a set of recommended lints to
   # encourage good coding practices. The lint set provided by the package is
