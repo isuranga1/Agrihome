@@ -1,6 +1,8 @@
 import 'package:agrihome/utils/colors.dart';
+import 'package:agrihome/utils/dimensions.dart';
 import 'package:agrihome/widgets/big_text.dart';
 import 'package:agrihome/widgets/small_text.dart';
+import 'package:dots_indicator/dots_indicator.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
@@ -15,7 +17,8 @@ class _HomeScreenBodyState extends State<HomeScreenBody> {
   PageController pageController = PageController(viewportFraction: 0.85);
   var _currentPageValue = 0.8;
   double _scaleFactor = 0.8;
-  double _height = 220;
+  double _height = 225;
+  //double _height = Dimensions.pageViewContainer;
 
   @override
   void initState() {
@@ -34,15 +37,31 @@ class _HomeScreenBodyState extends State<HomeScreenBody> {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      //margin: EdgeInsets.only(top: 70),
-      height: 320,
-      child: PageView.builder(
-          controller: pageController,
-          itemCount: 5,
-          itemBuilder: (context, position) {
-            return _buildPageItem(position);
-          }),
+    return Column(
+      children: [
+        Container(
+          //color: Colors.red,
+          //margin: EdgeInsets.only(top: 70),
+          height: 280,
+          child: PageView.builder(
+              controller: pageController,
+              itemCount: 5,
+              itemBuilder: (context, position) {
+                return _buildPageItem(position);
+              }),
+        ),
+        new DotsIndicator(
+          dotsCount: 5,
+          position: _currentPageValue,
+          decorator: DotsDecorator(
+            activeColor: AppColors.darkGreen,
+            size: const Size.square(9.0),
+            activeSize: const Size(18.0, 9.0),
+            activeShape: RoundedRectangleBorder(
+                borderRadius: BorderRadius.circular(5.0)),
+          ),
+        )
+      ],
     );
   }
 
@@ -79,7 +98,8 @@ class _HomeScreenBodyState extends State<HomeScreenBody> {
         children: [
           Container(
             margin: EdgeInsets.only(left: 10, right: 10),
-            height: 220,
+            height: 225,
+            //height: Dimensions.pageViewContainer,
             decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(25),
                 image: DecorationImage(
@@ -90,7 +110,8 @@ class _HomeScreenBodyState extends State<HomeScreenBody> {
             alignment: Alignment.bottomCenter,
             child: Container(
                 height: 105,
-                margin: EdgeInsets.only(left: 40, right: 40, bottom: 50),
+                //height: Dimensions.pageViewTextContainer,
+                margin: EdgeInsets.only(left: 40, right: 40, bottom: 20),
                 decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(15),
                     color: Colors.white,
@@ -98,7 +119,7 @@ class _HomeScreenBodyState extends State<HomeScreenBody> {
                       BoxShadow(
                           color: Color(0xFFe8e8e8),
                           blurRadius: 5.0,
-                          offset: Offset(3, 5)),
+                          offset: Offset(5, 5)),
                     ]),
                 child: Container(
                   padding: EdgeInsets.only(top: 15, left: 15, right: 15),

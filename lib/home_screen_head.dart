@@ -1,6 +1,7 @@
 import 'package:agrihome/utils/colors.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'categories.dart';
 import 'home_screen_body.dart';
 
 class HomeScreenHead extends StatefulWidget {
@@ -56,9 +57,26 @@ class _HomeScreenHeadState extends State<HomeScreenHead> {
               ],
             ),
           ),
+          //showing the 2 categories
+          //Categories(),   //need to check again
           //showing the body
+          SizedBox(
+            height: 50,
+          ),
           HomeScreenBody(),
-          Text("View More"),
+          SizedBox(
+            height: 10,
+          ),
+          Container(
+            padding: EdgeInsets.only(right: 20),
+            child: Row(
+              children: [
+                Expanded(child: Container()),
+                Text("View All",
+                    style: TextStyle(fontSize: 16, color: AppColors.darkGreen)),
+              ],
+            ),
+          ),
         ],
       ),
     );
