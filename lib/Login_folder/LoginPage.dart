@@ -1,8 +1,10 @@
 import 'dart:ui';
 
+import 'package:agrihome/home_screen_head.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:agrihome/home_screen_head.dart';
 
 import 'register_now.dart';
 
@@ -79,14 +81,28 @@ class _LoginPageState extends State<LoginPage> {
                   color: Colors.green,
                   borderRadius: BorderRadius.circular(15),
                 ),
-                child: const Center(
-                  child: Text(
-                    "Sign In",
-                    style: TextStyle(
-                      color: Colors.white,
-                      fontWeight: FontWeight.bold,
-                      fontSize: 18,
-                    ),
+                child: Center(
+                  child: Column(
+                    children: [
+                      GestureDetector(
+                        onTap: () {
+                          Navigator.of(context).push(
+                            MaterialPageRoute(
+                              builder: (BuildContext context) =>
+                                  HomeScreenHead(),
+                            ),
+                          );
+                        },
+                        child: Text(
+                          "Sign In",
+                          style: TextStyle(
+                            color: Colors.white,
+                            fontWeight: FontWeight.bold,
+                            fontSize: 18,
+                          ),
+                        ),
+                      )
+                    ],
                   ),
                 ),
               ),

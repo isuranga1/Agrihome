@@ -1,7 +1,9 @@
+import 'package:agrihome/Login_folder/LoginPage.dart';
 import 'package:flutter/material.dart';
 import 'dart:ui';
 import 'package:flutter/cupertino.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'LoginPage.dart';
 
 class RegisterNow extends StatefulWidget {
   RegisterNow({Key? key}) : super(key: key);
@@ -136,19 +138,31 @@ class _RegisterNowState extends State<RegisterNow> {
                   color: Colors.green,
                   borderRadius: BorderRadius.circular(15),
                 ),
-                child: const Center(
-                  child: Text(
-                    "Sign Up",
-                    style: TextStyle(
-                      color: Colors.white,
-                      fontWeight: FontWeight.bold,
-                      fontSize: 18,
-                    ),
+                child: Center(
+                  child: Column(
+                    children: [
+                      GestureDetector(
+                        onTap: () {
+                          Navigator.of(context).push(
+                            MaterialPageRoute(
+                              builder: (BuildContext context) => LoginPage(),
+                            ),
+                          );
+                        },
+                        child: Text(
+                          "Sign Up",
+                          style: TextStyle(
+                            color: Colors.white,
+                            fontWeight: FontWeight.bold,
+                            fontSize: 18,
+                          ),
+                        ),
+                      )
+                    ],
                   ),
                 ),
               ),
             ),
-
           ],
         ),
       ),
