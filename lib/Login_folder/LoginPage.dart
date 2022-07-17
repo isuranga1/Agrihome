@@ -22,9 +22,9 @@ class _LoginPageState extends State<LoginPage> {
       body: SingleChildScrollView(
         child: Column(
           children: [
-            const SizedBox(
-              height: 37,
-            ),
+            //const SizedBox(
+            //  height: 37,
+            //),
             Image.asset("assets/imgs/loginpic.png"),
             //photo
             const SizedBox(height: 80),
@@ -37,7 +37,7 @@ class _LoginPageState extends State<LoginPage> {
                   borderRadius: BorderRadius.circular(15),
                 ),
                 child: const Padding(
-                  padding: EdgeInsets.only(left: 8),
+                  padding: EdgeInsets.only(left: 10),
                   child: TextField(
                     decoration: InputDecoration(
                       border: InputBorder.none,
@@ -58,7 +58,7 @@ class _LoginPageState extends State<LoginPage> {
                   borderRadius: BorderRadius.circular(15),
                 ),
                 child: const Padding(
-                  padding: EdgeInsets.only(left: 8),
+                  padding: EdgeInsets.only(left: 10),
                   child: TextField(
                     obscureText: true,
                     decoration: InputDecoration(

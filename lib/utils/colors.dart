@@ -10,4 +10,6 @@ class AppColors {
   static final Color boldText = Color(0x1C1C1C);
   static final Color mediumText = Color(0x000000);
   static final Color searchText = Color(0x303030); //opacity: 30%
+
+  static final Color searchTextBox = Color.fromARGB(213, 14, 94, 80);
 }

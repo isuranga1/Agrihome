@@ -1,5 +1,6 @@
 import 'package:agrihome/Login_folder/LoginPage.dart';
 import 'package:agrihome/firstScreen.dart';
+import 'package:agrihome/market.dart';
 import 'package:flutter/material.dart';
 import 'bttmnavbar.dart';
 import 'home_screen_head.dart';
@@ -20,7 +21,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.green,
       ),
-      home: FirstScreen(),
+      home: HomeScreenHead(),
     );
   }
 }
