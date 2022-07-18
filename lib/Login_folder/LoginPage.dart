@@ -76,7 +76,12 @@ class _LoginPageState extends State<LoginPage> {
                   ),
                 );
               },
-              child: Text("Forgot your Password ?"),
+              child: Text(
+                "Forgot your Password ?",
+                style: TextStyle(
+                  fontWeight: FontWeight.bold,
+                ),
+              ),
             ),
             //fogotten password
             const SizedBox(height: 15),
