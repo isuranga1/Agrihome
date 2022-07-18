@@ -24,6 +24,18 @@ class ArticlePage extends StatefulWidget {
 }
 
 class _ArticlePageState extends State<ArticlePage> {
+  String description="Hydroponics is a method of growing plants without soil."
+                     " Hydroponic growing allows for faster growth and higher"
+                     " yields than traditional soil-based growing systems.";
+  String content='Simply put, hydroponic gardening is method of growing plants without soil. '
+                 'It’s a way to nurture a huge variety of edible plants (think herbs, veggies, '
+                 'even some fruits) indoors all year round, regardless of what Mother Nature is '
+                 'doing outside your door. A hydroponic system doesn’t take a lot of space '
+                 '(unless you want it to), it will work just about anywhere, and plants will actually grow'
+                 ' faster than if you were growing in-ground. It’s not hard to see why hydroponic gardening is'
+                 ' fast becoming a popular way to grow plants everywhere from kitchen counters to university '
+                 'dining halls !';
+  String img='assets/imgs/articleImg.png';
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -35,19 +47,23 @@ class _ArticlePageState extends State<ArticlePage> {
         child: Column(
           children: [
             Stack(children: [
+
+              //Article Image
               Container(
                 width: MediaQuery.of(context).size.width,
                 height: 350,
-                decoration: const BoxDecoration(
+                decoration:  BoxDecoration(
                   borderRadius: BorderRadius.only(
                       bottomLeft: Radius.circular(50),
                       bottomRight: Radius.circular(50)),
                   image: DecorationImage(
                     fit: BoxFit.fill,
-                    image: AssetImage('assets/imgs/articleImg.png'),
+                    image: AssetImage(img),
                   ),
                 ),
               ),
+
+              // Book mark Icon
               Padding(
                 padding: const EdgeInsets.all(12.0),
                 child: Align(
@@ -59,6 +75,8 @@ class _ArticlePageState extends State<ArticlePage> {
                   ),
                 ),
               ),
+
+              // Back Icon
               Padding(
                 padding: const EdgeInsets.all(12.0),
                 child: InkWell(
@@ -81,6 +99,8 @@ class _ArticlePageState extends State<ArticlePage> {
             const SizedBox(
               height: 18,
             ),
+
+            // Description
             Container(
               height: 80,
               width: 320,
@@ -91,12 +111,10 @@ class _ArticlePageState extends State<ArticlePage> {
                 ),
               ),
               margin: const EdgeInsets.all(10),
-              child: const Padding(
+              child: Padding(
                 padding: EdgeInsets.symmetric(horizontal: 18, vertical: 5),
                 child: Text(
-                  "Hydroponics is a method of growing plants without soil."
-                  " Hydroponic growing allows for faster growth and higher"
-                  " yields than traditional soil-based growing systems.",
+                   description,
                   maxLines: 4,
                   style: TextStyle(
                     fontSize: 13,
@@ -109,17 +127,12 @@ class _ArticlePageState extends State<ArticlePage> {
             const SizedBox(
               height: 5,
             ),
-            const Padding(
+
+            // Article content
+             Padding(
               padding: EdgeInsets.symmetric(horizontal: 20, vertical: 10),
               child: Text(
-                'Simply put, hydroponic gardening is method of growing plants without soil. '
-                'It’s a way to nurture a huge variety of edible plants (think herbs, veggies, '
-                'even some fruits) indoors all year round, regardless of what Mother Nature is '
-                'doing outside your door. A hydroponic system doesn’t take a lot of space '
-                '(unless you want it to), it will work just about anywhere, and plants will actually grow'
-                ' faster than if you were growing in-ground. It’s not hard to see why hydroponic gardening is'
-                ' fast becoming a popular way to grow plants everywhere from kitchen counters to university '
-                'dining halls !',
+                content,
                 style: TextStyle(fontSize: 15),
               ),
             ),
