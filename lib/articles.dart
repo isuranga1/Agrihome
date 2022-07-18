@@ -41,7 +41,7 @@ class _ArticlePageState extends State<ArticlePage> {
     return Scaffold(
       appBar: AppBar(
         toolbarHeight: 5,
-        backgroundColor: Colors.lightGreen,
+        backgroundColor: const Color.fromRGBO(36, 150, 126, 1),
       ),
       body: Container(
         child: Column(
