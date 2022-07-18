@@ -18,7 +18,7 @@ class _HomeScreenHeadState extends State<HomeScreenHead> {
     return Scaffold(
       body: Container(
         child: Container(
-          margin: EdgeInsets.only(top: 40, right: 20, left: 20),
+          margin: EdgeInsets.only(top: 60, right: 20, left: 20),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
@@ -86,7 +86,7 @@ class _HomeScreenHeadState extends State<HomeScreenHead> {
               //showing the vertial scrollview
               Expanded(
                 child: Padding(
-                  padding: const EdgeInsets.only(top: 10),
+                  padding: const EdgeInsets.only(top: 5),
                   child: ListView.builder(
                     itemCount: 5,
                     itemBuilder: (context, index) {

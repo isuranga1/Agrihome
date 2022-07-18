@@ -1,6 +1,7 @@
 import 'package:agrihome/utils/colors.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'Login_folder/LoginPage.dart';
 
 class FirstScreen extends StatefulWidget {
@@ -17,7 +18,7 @@ class _FirstScreenState extends State<FirstScreen> {
       body: Container(
         color: Colors.white,
         child: Container(
-          margin: const EdgeInsets.only(top: 70, right: 45, left: 45),
+          margin: const EdgeInsets.only(top: 90, right: 30, left: 30),
           width: MediaQuery.of(context).size.width,
           child: Column(
             children: [
@@ -30,7 +31,7 @@ class _FirstScreenState extends State<FirstScreen> {
                 ),
               ),
               Container(
-                margin: const EdgeInsets.only(top: 80),
+                margin: const EdgeInsets.only(top: 100),
                 width: 250,
                 height: 280,
                 decoration: const BoxDecoration(
@@ -39,7 +40,7 @@ class _FirstScreenState extends State<FirstScreen> {
                         image: AssetImage("assets/imgs/agriHomeLogo.png"),
                         fit: BoxFit.fill)),
               ),
-              const SizedBox(height: 110),
+              const SizedBox(height: 130),
               InkWell(
                 onTap: () {
                   Navigator.of(context).push(
@@ -51,7 +52,7 @@ class _FirstScreenState extends State<FirstScreen> {
                 },
                 child: Container(
                   width: MediaQuery.of(context).size.width,
-                  height: 50,
+                  height: 45,
                   decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(100),
                       gradient: LinearGradient(
@@ -75,7 +76,7 @@ class _FirstScreenState extends State<FirstScreen> {
                     ],
                   ),
                 ),
-              )
+              ),
             ],
           ),
         ),
