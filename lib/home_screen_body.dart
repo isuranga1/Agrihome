@@ -6,6 +6,7 @@ import 'package:dots_indicator/dots_indicator.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:agrihome/articles.dart';
+
 class HomeScreenBody extends StatefulWidget {
   const HomeScreenBody({Key? key}) : super(key: key);
 
@@ -108,57 +109,64 @@ class _HomeScreenBodyState extends State<HomeScreenBody> {
                       image: AssetImage("assets/imgs/pic1.jpg"))),
             ),
             onTap: () {
-              Navigator.push(
-                  context, MaterialPageRoute(builder: (context) => ArticlePage()));;
+              Navigator.push(context,
+                  MaterialPageRoute(builder: (context) => ArticlePage()));
+              ;
             },
           ),
-          Align(
-            alignment: Alignment.bottomCenter,
-            child: Container(
-                height: 105,
-                //height: Dimensions.pageViewTextContainer,
-                margin: EdgeInsets.only(left: 40, right: 40, bottom: 20),
-                decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(15),
-                    color: Colors.white,
-                    boxShadow: [
-                      BoxShadow(
-                          color: Color(0xFFe8e8e8),
-                          blurRadius: 5.0,
-                          offset: Offset(5, 5)),
-                    ]),
+          InkWell(
+              child: Align(
+                alignment: Alignment.bottomCenter,
                 child: Container(
-                  padding: EdgeInsets.only(top: 15, left: 15, right: 15),
-                  child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      BigText(text: 'How to make compost manure at home'),
-                      SizedBox(
-                        height: 10,
-                      ),
-                      Row(
-                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    height: 105,
+                    //height: Dimensions.pageViewTextContainer,
+                    margin: EdgeInsets.only(left: 40, right: 40, bottom: 20),
+                    decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(15),
+                        color: Colors.white,
+                        boxShadow: [
+                          BoxShadow(
+                              color: Color(0xFFe8e8e8),
+                              blurRadius: 5.0,
+                              offset: Offset(5, 5)),
+                        ]),
+                    child: Container(
+                      padding: EdgeInsets.only(top: 15, left: 15, right: 15),
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
-                          SmallText(text: "17 July,2022"),
-                          Container(
-                            width: 25,
-                            height: 25,
-                            child: Icon(
-                              Icons.bookmark_border,
-                              color: Colors.white,
-                              size: 15,
-                            ),
-                            decoration: BoxDecoration(
-                              borderRadius: BorderRadius.circular(15),
-                              color: AppColors.lightGreen,
-                            ),
+                          BigText(text: 'How to make compost manure at home'),
+                          SizedBox(
+                            height: 10,
+                          ),
+                          Row(
+                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                            children: [
+                              SmallText(text: "17 July,2022"),
+                              Container(
+                                width: 25,
+                                height: 25,
+                                child: Icon(
+                                  Icons.bookmark_border,
+                                  color: Colors.white,
+                                  size: 15,
+                                ),
+                                decoration: BoxDecoration(
+                                  borderRadius: BorderRadius.circular(15),
+                                  color: AppColors.lightGreen,
+                                ),
+                              ),
+                            ],
                           ),
                         ],
                       ),
-                    ],
-                  ),
-                )),
-          )
+                    )),
+              ),
+              onTap: () {
+                Navigator.push(context,
+                    MaterialPageRoute(builder: (context) => ArticlePage()));
+                ;
+              })
         ],
       ),
     );
