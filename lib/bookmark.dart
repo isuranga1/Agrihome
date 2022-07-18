@@ -7,7 +7,7 @@ class BookMark extends StatefulWidget {
   State<BookMark> createState() => _BookMarkState();
 }
 
-String img = 'assets/imgs/articleImg.png';
+String vertical_gardening = 'assets/imgs/verticalGardening.png';
 
 class _BookMarkState extends State<BookMark> {
   @override
@@ -18,13 +18,13 @@ class _BookMarkState extends State<BookMark> {
           height: 150,
           width: 400,
           decoration: BoxDecoration(
-            borderRadius: BorderRadius.circular(7),
+            borderRadius: BorderRadius.circular(20),
             color: const Color.fromRGBO(36, 150, 126, 1).withOpacity(0.2),
           ),
           child: Row(
             children: [
               Image(
-                image: AssetImage(img),
+                image: AssetImage(vertical_gardening),
                 height: 400,
                 width: 170,
               ),
