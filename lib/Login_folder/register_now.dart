@@ -136,9 +136,9 @@ class _RegisterNowState extends State<RegisterNow> {
               ),
             ),
             //confirm password
-            const SizedBox(height: 15),
+            const SizedBox(height: 25),
             Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 25.0),
+              padding: const EdgeInsets.symmetric(horizontal: 60.0),
               child: GestureDetector(
                 onTap: () {
                   Navigator.of(context).push(
@@ -148,7 +148,7 @@ class _RegisterNowState extends State<RegisterNow> {
                   );
                 },
                 child: Container(
-                  padding: EdgeInsets.all(20),
+                  padding: EdgeInsets.all(12),
                   decoration: BoxDecoration(
                     color: Colors.green,
                     borderRadius: BorderRadius.circular(15),

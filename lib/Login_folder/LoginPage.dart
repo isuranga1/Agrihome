@@ -4,6 +4,7 @@ import 'package:agrihome/home_screen_head.dart';
 import 'package:flutter/material.dart';
 import 'package:agrihome/Login_folder/register_now.dart';
 import 'package:agrihome/Login_folder/forgotten_password.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 class LoginPage extends StatefulWidget {
   const LoginPage({Key? key}) : super(key: key);
@@ -24,7 +25,14 @@ class _LoginPageState extends State<LoginPage> {
             const SizedBox(height: 37),
             Image.asset("assets/imgs/loginpic.png"),
             //photo
-            const SizedBox(height: 80),
+            const SizedBox(height: 10),
+            Text(
+              "Welcome",
+              style: GoogleFonts.ubuntu(
+                fontSize: 40,
+              ),
+            ),
+            SizedBox(height: 30),
             Padding(
               padding: const EdgeInsets.symmetric(horizontal: 25),
               child: Container(
@@ -86,7 +94,7 @@ class _LoginPageState extends State<LoginPage> {
             //fogotten password
             const SizedBox(height: 15),
             Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 25.0),
+              padding: const EdgeInsets.symmetric(horizontal: 60.0),
               child: GestureDetector(
                 onTap: () {
                   Navigator.of(context).push(
@@ -96,7 +104,7 @@ class _LoginPageState extends State<LoginPage> {
                   );
                 },
                 child: Container(
-                  padding: EdgeInsets.all(20),
+                  padding: EdgeInsets.all(12),
                   decoration: BoxDecoration(
                     color: Colors.green,
                     borderRadius: BorderRadius.circular(15),
