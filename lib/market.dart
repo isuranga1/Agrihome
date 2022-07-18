@@ -36,11 +36,82 @@ class Market extends StatelessWidget {
                     prefixIcon: Icon(Icons.search),
                     prefixIconColor: Color.fromARGB(186, 255, 255, 255)),
               ),
+              Container(
+                child: SingleChildScrollView(
+                    child: Column(
+                  children: [
+                    SizedBox(
+                        height: 50,
+                        child: ListView.builder(
+                          itemCount: 10,
+                          scrollDirection: Axis.horizontal,
+                          itemBuilder: (context, index) => Container(
+                            decoration: BoxDecoration(
+                                color: Color.fromARGB(106, 26, 121, 105),
+                                border: Border.all(
+                                  color: Color.fromARGB(0, 255, 255, 255),
+                                ),
+                                borderRadius:
+                                    BorderRadius.all(Radius.circular(20))),
+                            height: 100,
+                            width: 100,
+                            margin: EdgeInsets.all(10),
+                            child: Center(
+                              child: Text('card $index'),
+                            ),
+                          ),
+                        )),
+                    SizedBox(
+                        height: 500,
+                        child: ListView.builder(
+                            itemCount: 10,
+                            scrollDirection: Axis.vertical,
+                            itemBuilder: (context, index) => Row(
+                                  mainAxisAlignment: MainAxisAlignment.center,
+                                  children: [
+                                    Container(
+                                      decoration: BoxDecoration(
+                                          color:
+                                              Color.fromARGB(106, 26, 121, 105),
+                                          border: Border.all(
+                                            color: Color.fromARGB(
+                                                0, 255, 255, 255),
+                                          ),
+                                          borderRadius: BorderRadius.all(
+                                              Radius.circular(20))),
+                                      height: 200,
+                                      width: 150,
+                                      margin: EdgeInsets.all(10),
+                                      child: Center(
+                                        child: Text('card $index'),
+                                      ),
+                                    ),
+                                    Container(
+                                      decoration: BoxDecoration(
+                                          color:
+                                              Color.fromARGB(106, 26, 121, 105),
+                                          border: Border.all(
+                                            color: Color.fromARGB(
+                                                0, 255, 255, 255),
+                                          ),
+                                          borderRadius: BorderRadius.all(
+                                              Radius.circular(20))),
+                                      height: 200,
+                                      width: 150,
+                                      margin: EdgeInsets.all(10),
+                                      child: Center(
+                                        child: Text('card $index'),
+                                      ),
+                                    )
+                                  ],
+                                ))),
+                  ],
+                )),
+              )
             ],
           ),
         ),
       ),
-      extendBody: true,
     );
   }
 }
