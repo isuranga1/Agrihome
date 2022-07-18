@@ -1,12 +1,9 @@
 import 'dart:ui';
 
 import 'package:agrihome/home_screen_head.dart';
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
-import 'package:agrihome/home_screen_head.dart';
-
-import 'register_now.dart';
+import 'package:agrihome/Login_folder/register_now.dart';
+import 'package:agrihome/Login_folder/forgotten_password.dart';
 
 class LoginPage extends StatefulWidget {
   const LoginPage({Key? key}) : super(key: key);
@@ -71,6 +68,23 @@ class _LoginPageState extends State<LoginPage> {
             ),
             // Password
             const SizedBox(height: 15),
+            GestureDetector(
+              onTap: () {
+                Navigator.of(context).push(
+                  MaterialPageRoute(
+                    builder: (BuildContext context) => ForgottenPassword(),
+                  ),
+                );
+              },
+              child: Text(
+                "Forgot your Password ?",
+                style: TextStyle(
+                  fontWeight: FontWeight.bold,
+                ),
+              ),
+            ),
+            //fogotten password
+            const SizedBox(height: 15),
             Padding(
               padding: const EdgeInsets.symmetric(horizontal: 25.0),
               child: GestureDetector(
@@ -104,31 +118,29 @@ class _LoginPageState extends State<LoginPage> {
               ),
             ),
             //Sign in
-            const SizedBox(height: 10),
+            const SizedBox(height: 15),
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 const Text(
-                  "Not a member?  ",
+                  "Not a member :(  ",
                 ),
-                ElevatedButton(
-                  onPressed: () {
+                GestureDetector(
+                  onTap: () {
                     Navigator.of(context).push(
                       MaterialPageRoute(
                         builder: (BuildContext context) => RegisterNow(),
                       ),
                     );
                   },
-                  child: const Text(
-                    "Register now",
-                    style: TextStyle(
-                      fontWeight: FontWeight.bold,
-                    ),
+                  child: Text(
+                    "Register Now",
+                    style: TextStyle(fontWeight: FontWeight.bold),
                   ),
                 ),
               ],
             )
-            //register
+            //register now
           ],
         ),
       ),
