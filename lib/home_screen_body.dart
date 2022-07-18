@@ -5,7 +5,7 @@ import 'package:agrihome/widgets/small_text.dart';
 import 'package:dots_indicator/dots_indicator.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-
+import 'package:agrihome/articles.dart';
 class HomeScreenBody extends StatefulWidget {
   const HomeScreenBody({Key? key}) : super(key: key);
 
@@ -96,15 +96,21 @@ class _HomeScreenBodyState extends State<HomeScreenBody> {
       transform: matrix,
       child: Stack(
         children: [
-          Container(
-            margin: EdgeInsets.only(left: 10, right: 10),
-            height: 225,
-            //height: Dimensions.pageViewContainer,
-            decoration: BoxDecoration(
-                borderRadius: BorderRadius.circular(25),
-                image: DecorationImage(
-                    fit: BoxFit.cover,
-                    image: AssetImage("assets/imgs/pic1.jpg"))),
+          InkWell(
+            child: Container(
+              margin: EdgeInsets.only(left: 10, right: 10),
+              height: 225,
+              //height: Dimensions.pageViewContainer,
+              decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(25),
+                  image: DecorationImage(
+                      fit: BoxFit.cover,
+                      image: AssetImage("assets/imgs/pic1.jpg"))),
+            ),
+            onTap: () {
+              Navigator.push(
+                  context, MaterialPageRoute(builder: (context) => ArticlePage()));;
+            },
           ),
           Align(
             alignment: Alignment.bottomCenter,
