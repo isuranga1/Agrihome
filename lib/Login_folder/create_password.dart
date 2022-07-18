@@ -1,60 +1,46 @@
-import 'dart:ui';
-
-import 'package:agrihome/bttmnavbar.dart';
-import 'package:agrihome/home_screen_head.dart';
 import 'package:flutter/material.dart';
-import 'package:agrihome/Login_folder/register_now.dart';
-import 'package:agrihome/Login_folder/forgotten_password.dart';
 import 'package:google_fonts/google_fonts.dart';
+import "LoginPage.dart";
 
-class LoginPage extends StatefulWidget {
-  const LoginPage({Key? key}) : super(key: key);
+class CreatePassword extends StatefulWidget {
+  CreatePassword({Key? key}) : super(key: key);
 
   @override
-  State<LoginPage> createState() => _LoginPageState();
+  State<CreatePassword> createState() => _CreatePasswordState();
 }
 
-class _LoginPageState extends State<LoginPage> {
+class _CreatePasswordState extends State<CreatePassword> {
   @override
   Widget build(BuildContext context) {
-    // ignore: dead_code
     return Scaffold(
-      backgroundColor: Colors.white,
-      body: SingleChildScrollView(
+      body: Padding(
+        padding: const EdgeInsets.only(left: 8.0),
         child: Column(
           children: [
-            const SizedBox(height: 37),
-            Image.asset("assets/imgs/loginpic.png"),
-            //photo
-            const SizedBox(height: 10),
-            Text(
-              "Welcome",
-              style: GoogleFonts.ubuntu(
-                fontSize: 40,
-              ),
-            ),
-            SizedBox(height: 30),
-            Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 25),
-              child: Container(
-                decoration: BoxDecoration(
-                  color: Colors.grey[200],
-                  border: Border.all(color: Colors.black12),
-                  borderRadius: BorderRadius.circular(15),
-                ),
-                child: const Padding(
-                  padding: EdgeInsets.only(left: 8),
-                  child: TextField(
-                    decoration: InputDecoration(
-                      border: InputBorder.none,
-                      hintText: "Email",
-                    ),
+            SizedBox(height: 37),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.start,
+              children: [
+                SizedBox(height: 37),
+                Text(
+                  "Create new password",
+                  style: TextStyle(
+                    fontSize: 25,
+                    fontWeight: FontWeight.bold,
                   ),
                 ),
+              ],
+            ),
+            //create new password
+            SizedBox(height: 15),
+            Text(
+              "Your new password must be differerent from previous used passwords",
+              style: TextStyle(
+                color: Colors.grey.shade600,
               ),
             ),
-            // Email
-            const SizedBox(height: 10),
+            //instruction text
+            SizedBox(height: 25),
             Padding(
               padding: const EdgeInsets.symmetric(horizontal: 25),
               child: Container(
@@ -69,38 +55,57 @@ class _LoginPageState extends State<LoginPage> {
                     obscureText: true,
                     decoration: InputDecoration(
                       border: InputBorder.none,
-                      hintText: "Password",
+                      hintText: "New password",
                     ),
                   ),
                 ),
               ),
             ),
-            // Password
-            const SizedBox(height: 15),
-            GestureDetector(
-              onTap: () {
-                Navigator.of(context).push(
-                  MaterialPageRoute(
-                    builder: (BuildContext context) => ForgottenPassword(),
+            //new password
+            SizedBox(height: 5),
+            Text(
+              "Must be at least 8 characters.",
+              style: TextStyle(
+                color: Colors.grey.shade600,
+              ),
+            ),
+            SizedBox(height: 15),
+            Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 25),
+              child: Container(
+                decoration: BoxDecoration(
+                  color: Colors.grey[200],
+                  border: Border.all(color: Colors.black12),
+                  borderRadius: BorderRadius.circular(15),
+                ),
+                child: const Padding(
+                  padding: EdgeInsets.only(left: 8),
+                  child: TextField(
+                    obscureText: true,
+                    decoration: InputDecoration(
+                      border: InputBorder.none,
+                      hintText: "Confirm new password",
+                    ),
                   ),
-                );
-              },
-              child: Text(
-                "Forgot your Password ?",
-                style: TextStyle(
-                  fontWeight: FontWeight.bold,
                 ),
               ),
             ),
-            //fogotten password
-            const SizedBox(height: 15),
+            //confirm new password
+            SizedBox(height: 5),
+            Text(
+              "Both passwords must match",
+              style: TextStyle(
+                color: Colors.grey.shade600,
+              ),
+            ),
+            SizedBox(height: 15),
             Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 60.0),
+              padding: const EdgeInsets.symmetric(horizontal: 100.0),
               child: GestureDetector(
                 onTap: () {
                   Navigator.of(context).push(
                     MaterialPageRoute(
-                      builder: (BuildContext context) => BtmNavBar(),
+                      builder: (BuildContext context) => LoginPage(),
                     ),
                   );
                 },
@@ -114,7 +119,7 @@ class _LoginPageState extends State<LoginPage> {
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
                       Text(
-                        "Sign In",
+                        "Confirm",
                         style: TextStyle(
                           color: Colors.white,
                           fontWeight: FontWeight.bold,
@@ -126,30 +131,7 @@ class _LoginPageState extends State<LoginPage> {
                 ),
               ),
             ),
-            //Sign in
-            const SizedBox(height: 15),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                const Text(
-                  "Not a member :(  ",
-                ),
-                GestureDetector(
-                  onTap: () {
-                    Navigator.of(context).push(
-                      MaterialPageRoute(
-                        builder: (BuildContext context) => RegisterNow(),
-                      ),
-                    );
-                  },
-                  child: Text(
-                    "Register Now",
-                    style: TextStyle(fontWeight: FontWeight.bold),
-                  ),
-                ),
-              ],
-            )
-            //register now
+            //Confirm password
           ],
         ),
       ),
