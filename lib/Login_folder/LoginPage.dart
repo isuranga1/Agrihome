@@ -1,5 +1,6 @@
 import 'dart:ui';
 
+import 'package:agrihome/bttmnavbar.dart';
 import 'package:agrihome/home_screen_head.dart';
 import 'package:flutter/material.dart';
 import 'package:agrihome/Login_folder/register_now.dart';
@@ -91,7 +92,7 @@ class _LoginPageState extends State<LoginPage> {
                 onTap: () {
                   Navigator.of(context).push(
                     MaterialPageRoute(
-                      builder: (BuildContext context) => HomeScreenHead(),
+                      builder: (BuildContext context) => BtmNavBar(),
                     ),
                   );
                 },

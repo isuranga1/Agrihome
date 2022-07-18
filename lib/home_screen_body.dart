@@ -17,8 +17,8 @@ class HomeScreenBody extends StatefulWidget {
 class _HomeScreenBodyState extends State<HomeScreenBody> {
   PageController pageController = PageController(viewportFraction: 0.85);
   var _currentPageValue = 0.8;
-  double _scaleFactor = 0.8;
-  double _height = 225;
+  double _scaleFactor = 0.85;
+  double _height = 195;
   //double _height = Dimensions.pageViewContainer;
 
   @override
@@ -43,7 +43,7 @@ class _HomeScreenBodyState extends State<HomeScreenBody> {
         Container(
           //color: Colors.red,
           //margin: EdgeInsets.only(top: 70),
-          height: 280,
+          height: 250,
           child: PageView.builder(
               controller: pageController,
               itemCount: 5,
@@ -100,8 +100,7 @@ class _HomeScreenBodyState extends State<HomeScreenBody> {
           InkWell(
             child: Container(
               margin: EdgeInsets.only(left: 10, right: 10),
-              height: 225,
-              //height: Dimensions.pageViewContainer,
+              height: 195,
               decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(25),
                   image: DecorationImage(
@@ -118,7 +117,7 @@ class _HomeScreenBodyState extends State<HomeScreenBody> {
               child: Align(
                 alignment: Alignment.bottomCenter,
                 child: Container(
-                    height: 105,
+                    height: 95,
                     //height: Dimensions.pageViewTextContainer,
                     margin: EdgeInsets.only(left: 40, right: 40, bottom: 20),
                     decoration: BoxDecoration(
@@ -128,7 +127,7 @@ class _HomeScreenBodyState extends State<HomeScreenBody> {
                           BoxShadow(
                               color: Color(0xFFe8e8e8),
                               blurRadius: 5.0,
-                              offset: Offset(5, 5)),
+                              offset: Offset(5, 7)),
                         ]),
                     child: Container(
                       padding: EdgeInsets.only(top: 15, left: 15, right: 15),
@@ -137,23 +136,25 @@ class _HomeScreenBodyState extends State<HomeScreenBody> {
                         children: [
                           BigText(text: 'How to make compost manure at home'),
                           SizedBox(
-                            height: 10,
+                            height: 6,
                           ),
                           Row(
                             mainAxisAlignment: MainAxisAlignment.spaceBetween,
                             children: [
                               SmallText(text: "17 July,2022"),
-                              Container(
-                                width: 25,
-                                height: 25,
-                                child: Icon(
-                                  Icons.bookmark_border,
-                                  color: Colors.white,
-                                  size: 15,
-                                ),
-                                decoration: BoxDecoration(
-                                  borderRadius: BorderRadius.circular(15),
-                                  color: AppColors.lightGreen,
+                              Center(
+                                child: Container(
+                                  width: 22,
+                                  height: 22,
+                                  child: Icon(
+                                    Icons.bookmark_outline_sharp,
+                                    color: AppColors.darkGreen,
+                                    size: 14,
+                                  ),
+                                  decoration: BoxDecoration(
+                                    borderRadius: BorderRadius.circular(15),
+                                    color: Colors.green.withOpacity(0.2),
+                                  ),
                                 ),
                               ),
                             ],
