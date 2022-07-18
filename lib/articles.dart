@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:agrihome/home_screen_head.dart';
 
 class Article extends StatefulWidget {
   const Article({Key? key}) : super(key: key);
@@ -60,13 +61,20 @@ class _ArticlePageState extends State<ArticlePage> {
               ),
               Padding(
                 padding: const EdgeInsets.all(12.0),
-                child: Align(
-                  alignment: Alignment.bottomLeft,
-                  child: Icon(
-                    Icons.arrow_back_ios_new,
-                    size: 40,
-                    color: Colors.white,
+                child: InkWell(
+                  child: Align(
+                    alignment: Alignment.bottomLeft,
+                    child: Icon(
+                      Icons.arrow_back_ios_new,
+                      size: 40,
+                      color: Colors.white,
+                    ),
                   ),
+                  onTap: () {
+                    Navigator.push(context,
+                        MaterialPageRoute(builder: (context) => HomeScreenHead()));
+                    ;
+                  },
                 ),
               )
             ]),
