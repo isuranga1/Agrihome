@@ -7,6 +7,7 @@ import 'package:flutter/material.dart';
 import 'bttmnavbar.dart';
 import 'home_screen_head.dart';
 import 'package:get/get.dart';
+import 'articles.dart';
 
 void main() {
   runApp(const MyApp());
@@ -24,7 +25,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.green,
       ),
-      home: BtmNavBar(),
+      home: FirstScreen(),
     );
   }
 }
