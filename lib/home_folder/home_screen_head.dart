@@ -4,9 +4,9 @@ import 'package:agrihome/utils/appColors.dart';
 import 'package:agrihome/widgets/small_text.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:agrihome/view_all_article_page.dart';
+import 'package:agrihome/home_folder/view_all_article_page.dart';
 
-import '../return_article_section.dart';
+import 'return_article_section.dart';
 
 class HomeScreenHead extends StatefulWidget {
   const HomeScreenHead({Key? key}) : super(key: key);

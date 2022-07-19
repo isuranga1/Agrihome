@@ -1,4 +1,4 @@
-import 'package:agrihome/profile.dart';
+import 'package:agrihome/profile_folder/profile.dart';
 import 'package:agrihome/utils/appColors.dart';
 import 'package:flutter/material.dart';
 

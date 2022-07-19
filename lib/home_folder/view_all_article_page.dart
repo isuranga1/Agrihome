@@ -1,22 +1,24 @@
-import 'package:agrihome/profile.dart';
+//when clicking on "view all" in home section,then navigate to this page
+
+import 'package:agrihome/bttmnavbar.dart';
 import 'package:agrihome/utils/appColors.dart';
-import 'package:flutter/cupertino.dart';
+import 'package:agrihome/home_folder/return_article_section.dart';
 import 'package:flutter/material.dart';
 
-class BookmarkPage extends StatefulWidget {
-  const BookmarkPage({Key? key}) : super(key: key);
+class ViewArticlePage extends StatefulWidget {
+  const ViewArticlePage({Key? key}) : super(key: key);
 
   @override
-  State<BookmarkPage> createState() => _BookmarkPageState();
+  State<ViewArticlePage> createState() => _BookMarkPageState();
 }
 
-class _BookmarkPageState extends State<BookmarkPage> {
+class _BookMarkPageState extends State<ViewArticlePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
         title: const Text(
-          "Bookmark",
+          "View all articles",
           style: TextStyle(
               fontSize: 20, fontWeight: FontWeight.w500, color: Colors.white),
         ),
@@ -34,13 +36,17 @@ class _BookmarkPageState extends State<BookmarkPage> {
                 context,
                 MaterialPageRoute(
                     builder: (context) =>
-                        Profile())); //######## temporary navigator ==> home page
+                        BtmNavBar())); //######## temporary navigator ==> home page
             ;
           },
         ),
       ),
-
-      //implement body
+      body: Padding(
+        padding:
+            const EdgeInsets.only(top: 15, right: 15, left: 15, bottom: 10),
+        //call the article section
+        child: ViewArticles(),
+      ),
     );
   }
 }
