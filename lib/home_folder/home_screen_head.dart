@@ -1,5 +1,5 @@
-import 'package:agrihome/categories.dart';
-import 'package:agrihome/home_screen_body.dart';
+import 'package:agrihome/home_folder/categories.dart';
+import 'package:agrihome/home_folder/home_screen_body.dart';
 import 'package:agrihome/utils/appColors.dart';
 import 'package:agrihome/widgets/small_text.dart';
 import 'package:flutter/cupertino.dart';
