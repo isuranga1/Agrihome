@@ -1,3 +1,5 @@
+import 'package:agrihome/bttmnavbar.dart';
+import 'package:agrihome/utils/appColors.dart';
 import 'package:flutter/material.dart';
 
 class BookMarkPage extends StatefulWidget {
@@ -13,18 +15,24 @@ class _BookMarkPageState extends State<BookMarkPage> {
     return Scaffold(
       appBar: AppBar(
         title: const Text(
-          'Bookmark',
-          style: TextStyle(fontSize: 23, fontWeight: FontWeight.bold),
+          "Bookmark",
+          style: TextStyle(
+              fontSize: 20, fontWeight: FontWeight.w500, color: Colors.white),
         ),
-        backgroundColor: const Color.fromRGBO(36, 150, 126, 1),
-        toolbarHeight: 80,
-        leading: const Icon(
-          Icons.arrow_back_ios_new,
-          size: 40,
+        backgroundColor: AppColors.darkGreen,
+        //toolbarHeight: 50.0,
+        foregroundColor: Colors.white,
+        leading: IconButton(
+          icon: Icon(
+            Icons.arrow_back_ios,
+            size: 19,
+          ),
+          onPressed: () => BtmNavBar(),
         ),
       ),
       body: Padding(
-        padding: const EdgeInsets.only(top: 5),
+        padding:
+            const EdgeInsets.only(top: 20, right: 15, left: 15, bottom: 10),
         child: ListView.builder(
           itemCount: 10,
           itemBuilder: (context, index) {
@@ -52,7 +60,7 @@ class _BookMarkPageState extends State<BookMarkPage> {
                                     fontWeight: FontWeight.w500,
                                     fontSize: 16),
                               ),
-                              Icon(Icons.bookmark_border,
+                              Icon(Icons.bookmark,
                                   size: 15, color: Colors.green)
                             ],
                           ),

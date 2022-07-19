@@ -17,7 +17,7 @@ class _ProfileSettingsState extends State<ProfileSettings> {
         title: const Text(
           "Profile Settings",
           style: TextStyle(
-              fontSize: 18, fontWeight: FontWeight.w400, color: Colors.white),
+              fontSize: 20, fontWeight: FontWeight.w500, color: Colors.white),
         ),
         backgroundColor: AppColors.darkGreen,
         //toolbarHeight: 50.0,
@@ -25,7 +25,7 @@ class _ProfileSettingsState extends State<ProfileSettings> {
         leading: IconButton(
           icon: Icon(
             Icons.arrow_back_ios,
-            size: 18,
+            size: 19,
           ),
           onPressed: () => Profile(),
         ),
