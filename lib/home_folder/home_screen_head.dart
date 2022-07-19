@@ -1,12 +1,8 @@
 import 'package:agrihome/home_folder/categories.dart';
 import 'package:agrihome/home_folder/home_screen_body.dart';
 import 'package:agrihome/utils/appColors.dart';
-import 'package:agrihome/widgets/small_text.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:agrihome/home_folder/view_all_article_page.dart';
-
-import 'return_article_section.dart';
 
 class HomeScreenHead extends StatefulWidget {
   const HomeScreenHead({Key? key}) : super(key: key);
@@ -23,7 +19,7 @@ class _HomeScreenHeadState extends State<HomeScreenHead> {
         child: Column(
           children: [
             Container(
-              margin: EdgeInsets.only(top: 70, right: 20, left: 20),
+              margin: EdgeInsets.only(top: 80, right: 20, left: 20),
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
@@ -37,7 +33,7 @@ class _HomeScreenHeadState extends State<HomeScreenHead> {
                     ),
                   ),
                   SizedBox(
-                    height: 16.0,
+                    height: 14.0,
                   ),
                   //showing search bar
                   SizedBox(

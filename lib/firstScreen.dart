@@ -18,7 +18,7 @@ class _FirstScreenState extends State<FirstScreen> {
       body: Container(
         color: Colors.white,
         child: Container(
-          margin: const EdgeInsets.only(top: 90, right: 30, left: 30),
+          margin: const EdgeInsets.only(top: 110, right: 30, left: 30),
           width: MediaQuery.of(context).size.width,
           child: Column(
             children: [
@@ -31,7 +31,7 @@ class _FirstScreenState extends State<FirstScreen> {
                 ),
               ),
               Container(
-                margin: const EdgeInsets.only(top: 100),
+                margin: const EdgeInsets.only(top: 105),
                 width: 250,
                 height: 280,
                 decoration: const BoxDecoration(
