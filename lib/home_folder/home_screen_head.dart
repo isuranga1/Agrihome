@@ -4,7 +4,9 @@ import 'package:agrihome/utils/appColors.dart';
 import 'package:agrihome/widgets/small_text.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:agrihome/bookMarkPage.dart';
+import 'package:agrihome/view_all_article_page.dart';
+
+import '../return_article_section.dart';
 
 class HomeScreenHead extends StatefulWidget {
   const HomeScreenHead({Key? key}) : super(key: key);
@@ -19,11 +21,11 @@ class _HomeScreenHeadState extends State<HomeScreenHead> {
     return Scaffold(
       body: Container(
         child: Container(
-          margin: EdgeInsets.only(top: 60, right: 20, left: 20),
+          margin: EdgeInsets.only(top: 70, right: 20, left: 20),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              //showing wlcome text
+              //showing welcome text
               Text(
                 "Welcome",
                 style: TextStyle(
@@ -49,10 +51,10 @@ class _HomeScreenHeadState extends State<HomeScreenHead> {
                       ),
                       hintText: 'Search Here',
                       hintStyle: TextStyle(
-                          color: Colors.black.withOpacity(0.4), fontSize: 18),
+                          color: Colors.black.withOpacity(0.4), fontSize: 19),
                       prefixIcon: Icon(
                         Icons.search,
-                        size: 20,
+                        size: 21,
                       ),
                       prefixIconColor: Colors.black.withOpacity(0.1)),
                 ),
@@ -61,6 +63,7 @@ class _HomeScreenHeadState extends State<HomeScreenHead> {
               SizedBox(
                 height: 70.0,
               ),
+              //showing the horizontal scrolling
               HomeScreenBody(),
               //showing the 2 texts in a row
               Padding(
@@ -87,82 +90,15 @@ class _HomeScreenHeadState extends State<HomeScreenHead> {
                             context,
                             MaterialPageRoute(
                                 builder: (context) =>
-                                    BookMarkPage())); //######## temporary navigator ==> bookmark page
+                                    ViewArticlePage())); //######## temporary navigator ==> View Article page
                         ;
                       },
                     ),
                   ],
                 ),
               ),
-              //showing the vertial scrollview
-              Expanded(
-                child: Padding(
-                  padding: const EdgeInsets.only(top: 5),
-                  child: ListView.builder(
-                    itemCount: 5,
-                    itemBuilder: (context, index) {
-                      return Stack(
-                        children: [
-                          Container(
-                              margin: EdgeInsets.only(bottom: 15),
-                              height: 120,
-                              width: double.infinity,
-                              decoration: BoxDecoration(
-                                  borderRadius: BorderRadius.circular(15),
-                                  color: Color(0XFFE8F5E9)),
-                              child: Padding(
-                                padding:
-                                    const EdgeInsets.only(right: 20, left: 140),
-                                child: Column(
-                                  mainAxisAlignment: MainAxisAlignment.center,
-                                  children: [
-                                    Row(
-                                      mainAxisAlignment:
-                                          MainAxisAlignment.spaceBetween,
-                                      children: [
-                                        Text(
-                                          "Vertical Gardening",
-                                          style: TextStyle(
-                                              color: Colors.black,
-                                              fontWeight: FontWeight.w500,
-                                              fontSize: 16),
-                                        ),
-                                        Icon(Icons.bookmark_border,
-                                            size: 15,
-                                            color: AppColors.darkGreen)
-                                      ],
-                                    ),
-                                    SizedBox(height: 8),
-                                    Text(
-                                      " to make compost at home How to make compost at home to make compost at home How to make compost at home",
-                                      maxLines: 3,
-                                      style: TextStyle(
-                                        color: Colors.black,
-                                        fontSize: 13,
-                                      ),
-                                    ),
-                                  ],
-                                ),
-                              )),
-                          Padding(
-                            padding: const EdgeInsets.symmetric(vertical: 5),
-                            child: Container(
-                              width: 120,
-                              height: 110,
-                              decoration: BoxDecoration(
-                                  borderRadius: BorderRadius.circular(15),
-                                  image: DecorationImage(
-                                      fit: BoxFit.cover,
-                                      image:
-                                          AssetImage("assets/imgs/pic1.jpg"))),
-                            ),
-                          ),
-                        ],
-                      );
-                    },
-                  ),
-                ),
-              ),
+              //return the article section from another class
+              ViewArticles(),
             ],
           ),
         ),

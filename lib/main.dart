@@ -6,7 +6,7 @@ import 'package:agrihome/market.dart';
 import 'package:agrihome/profile_settings.dart';
 import 'package:agrihome/publish_articles.dart';
 import 'package:flutter/material.dart';
-import 'bookMarkPage.dart';
+import 'view_all_article_page.dart';
 import 'bttmnavbar.dart';
 import 'home_folder/home_screen_head.dart';
 import 'package:get/get.dart';
@@ -28,7 +28,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.green,
       ),
-      home: Market(),
+      home: LoginPage(),
     );
   }
 }
