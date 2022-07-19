@@ -20,87 +20,60 @@ class _HomeScreenHeadState extends State<HomeScreenHead> {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Container(
-        child: Container(
-          margin: EdgeInsets.only(top: 70, right: 20, left: 20),
-          child: Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              //showing welcome text
-              Text(
-                "Welcome",
-                style: TextStyle(
-                  fontSize: 23,
-                  fontWeight: FontWeight.bold,
-                  color: AppColors.darkGreen,
-                ),
-              ),
-              SizedBox(
-                height: 16.0,
-              ),
-              //showing search bar
-              SizedBox(
-                height: 40,
-                child: TextFormField(
-                  decoration: InputDecoration(
-                      filled: true,
-                      fillColor: AppColors.darkGreen.withOpacity(0.15),
-                      contentPadding: EdgeInsets.fromLTRB(5, 5, 5, 5),
-                      border: OutlineInputBorder(
-                        borderRadius: BorderRadius.circular(10),
-                        borderSide: BorderSide.none,
-                      ),
-                      hintText: 'Search Here',
-                      hintStyle: TextStyle(
-                          color: Colors.black.withOpacity(0.4), fontSize: 19),
-                      prefixIcon: Icon(
-                        Icons.search,
-                        size: 21,
-                      ),
-                      prefixIconColor: Colors.black.withOpacity(0.1)),
-                ),
-              ),
-              //add space for vertical selection
-              SizedBox(
-                height: 70.0,
-              ),
-              //showing the horizontal scrolling
-              HomeScreenBody(),
-              //showing the 2 texts in a row
-              Padding(
-                padding: const EdgeInsets.only(top: 5),
-                child: Row(
-                  crossAxisAlignment: CrossAxisAlignment.center,
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    Text(
-                      "Popular",
-                      style:
-                          TextStyle(fontSize: 20, fontWeight: FontWeight.w500),
+        child: Column(
+          children: [
+            Container(
+              margin: EdgeInsets.only(top: 70, right: 20, left: 20),
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  //showing welcome text
+                  Text(
+                    "Welcome",
+                    style: TextStyle(
+                      fontSize: 23,
+                      fontWeight: FontWeight.bold,
+                      color: AppColors.darkGreen,
                     ),
-                    GestureDetector(
-                      child: Text(
-                        "View All",
-                        style: TextStyle(
-                            color: AppColors.darkGreen,
-                            fontSize: 16,
-                            fontWeight: FontWeight.w400),
-                      ),
-                      onTap: () {
-                        Navigator.push(
-                            context,
-                            MaterialPageRoute(
-                                builder: (context) =>
-                                    ViewArticlePage())); //######## temporary navigator ==> View Article page
-                        ;
-                      },
+                  ),
+                  SizedBox(
+                    height: 16.0,
+                  ),
+                  //showing search bar
+                  SizedBox(
+                    height: 40,
+                    child: TextFormField(
+                      decoration: InputDecoration(
+                          filled: true,
+                          fillColor: AppColors.darkGreen.withOpacity(0.15),
+                          contentPadding: EdgeInsets.fromLTRB(5, 5, 5, 5),
+                          border: OutlineInputBorder(
+                            borderRadius: BorderRadius.circular(10),
+                            borderSide: BorderSide.none,
+                          ),
+                          hintText: 'Search Here',
+                          hintStyle: TextStyle(
+                              color: Colors.black.withOpacity(0.4),
+                              fontSize: 19),
+                          prefixIcon: Icon(
+                            Icons.search,
+                            size: 21,
+                          ),
+                          prefixIconColor: Colors.black.withOpacity(0.1)),
                     ),
-                  ],
-                ),
+                  ),
+                  //add space for vertical selection
+                  SizedBox(
+                    height: 70.0,
+                  ),
+                ],
               ),
-              //return the article section from another class
-              ViewArticles(),
-            ],
-          ),
+            ),
+            Expanded(
+                child: SingleChildScrollView(
+              child: HomeScreenBody(),
+            ))
+          ],
         ),
       ),
     );

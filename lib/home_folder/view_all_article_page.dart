@@ -18,7 +18,7 @@ class _BookMarkPageState extends State<ViewArticlePage> {
     return Scaffold(
       appBar: AppBar(
         title: const Text(
-          "View all articles",
+          "View Articles",
           style: TextStyle(
               fontSize: 20, fontWeight: FontWeight.w500, color: Colors.white),
         ),
@@ -42,8 +42,7 @@ class _BookMarkPageState extends State<ViewArticlePage> {
         ),
       ),
       body: Padding(
-        padding:
-            const EdgeInsets.only(top: 15, right: 15, left: 15, bottom: 10),
+        padding: const EdgeInsets.only(top: 15, bottom: 10),
         //call the article section
         child: ViewArticles(),
       ),

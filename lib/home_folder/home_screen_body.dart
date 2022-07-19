@@ -1,3 +1,5 @@
+import 'package:agrihome/home_folder/return_article_section.dart';
+import 'package:agrihome/home_folder/view_all_article_page.dart';
 import 'package:agrihome/utils/appColors.dart';
 import 'package:agrihome/utils/dimensions.dart';
 import 'package:agrihome/widgets/big_text.dart';
@@ -16,7 +18,7 @@ class HomeScreenBody extends StatefulWidget {
 
 class _HomeScreenBodyState extends State<HomeScreenBody> {
   PageController pageController = PageController(viewportFraction: 0.85);
-  var _currentPageValue = 0.8;
+  var _currentPageValue = 0.0;
   double _scaleFactor = 0.85;
   double _height = 195;
   //double _height = Dimensions.pageViewContainer;
@@ -40,9 +42,8 @@ class _HomeScreenBodyState extends State<HomeScreenBody> {
   Widget build(BuildContext context) {
     return Column(
       children: [
+        //horizontal slider section
         Container(
-          //color: Colors.red,
-          //margin: EdgeInsets.only(top: 70),
           height: 250,
           child: PageView.builder(
               controller: pageController,
@@ -51,6 +52,7 @@ class _HomeScreenBodyState extends State<HomeScreenBody> {
                 return _buildPageItem(position);
               }),
         ),
+        //dots
         new DotsIndicator(
           dotsCount: 5,
           position: _currentPageValue,
@@ -61,7 +63,89 @@ class _HomeScreenBodyState extends State<HomeScreenBody> {
             activeShape: RoundedRectangleBorder(
                 borderRadius: BorderRadius.circular(5.0)),
           ),
-        )
+        ),
+        //vertical space
+        SizedBox(
+          height: 10,
+        ),
+        //popular text
+        Container(
+          margin: EdgeInsets.only(left: 20, right: 20),
+          child: Row(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              Text(
+                "Popular",
+                style: TextStyle(fontSize: 20, fontWeight: FontWeight.w500),
+              ),
+            ],
+          ),
+        ),
+        //showing the vertical scrolling
+        ListView.builder(
+            physics: NeverScrollableScrollPhysics(),
+            shrinkWrap: true,
+            itemCount: 15,
+            itemBuilder: (context, index) {
+              return Container(
+                margin: EdgeInsets.only(right: 18, left: 18, bottom: 10),
+                child: Stack(
+                  children: [
+                    //text section
+                    Container(
+                        height: 120,
+                        width: double.infinity,
+                        decoration: BoxDecoration(
+                            borderRadius: BorderRadius.circular(15),
+                            color: Color(0XFFE8F5E9)),
+                        child: Padding(
+                          padding: const EdgeInsets.only(right: 20, left: 140),
+                          child: Column(
+                            mainAxisAlignment: MainAxisAlignment.center,
+                            children: [
+                              Row(
+                                mainAxisAlignment:
+                                    MainAxisAlignment.spaceBetween,
+                                children: [
+                                  Text(
+                                    "Vertical Gardening",
+                                    style: TextStyle(
+                                        color: Colors.black,
+                                        fontWeight: FontWeight.w500,
+                                        fontSize: 16),
+                                  ),
+                                  Icon(Icons.bookmark_border,
+                                      size: 15, color: AppColors.darkGreen)
+                                ],
+                              ),
+                              SizedBox(height: 8),
+                              Text(
+                                " to make compost at home How to make compost at home to make compost at home How to make compost at home",
+                                maxLines: 3,
+                                style: TextStyle(
+                                  color: Colors.black,
+                                  fontSize: 13,
+                                ),
+                              ),
+                            ],
+                          ),
+                        )),
+                    //image section
+                    Container(
+                      margin: EdgeInsets.all(5),
+                      width: 120,
+                      height: 110,
+                      decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(5),
+                          color: Colors.red,
+                          image: DecorationImage(
+                              fit: BoxFit.cover,
+                              image: AssetImage("assets/imgs/pic1.jpg"))),
+                    ),
+                  ],
+                ),
+              );
+            }),
       ],
     );
   }
@@ -173,3 +257,37 @@ class _HomeScreenBodyState extends State<HomeScreenBody> {
     );
   }
 }
+
+//popular & view all 2 texts
+/*
+Container(
+          margin: EdgeInsets.only(left: 20, right: 20),
+          child: Row(
+            crossAxisAlignment: CrossAxisAlignment.center,
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            children: [
+              Text(
+                "Popular",
+                style: TextStyle(fontSize: 20, fontWeight: FontWeight.w500),
+              ),
+              GestureDetector(
+                child: Text(
+                  "View All",
+                  style: TextStyle(
+                      color: AppColors.darkGreen,
+                      fontSize: 16,
+                      fontWeight: FontWeight.w400),
+                ),
+                onTap: () {
+                  Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                          builder: (context) =>
+                              ViewArticlePage())); //######## temporary navigator ==> View Article page
+                  ;
+                },
+              ),
+            ],
+          ),
+        ),
+ */
