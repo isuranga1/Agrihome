@@ -15,14 +15,19 @@ class _BookMarkPageState extends State<BookMarkPage> {
         title:const Text('Bookmark',style: TextStyle(fontSize: 23,fontWeight: FontWeight.bold), ),
         backgroundColor:const Color.fromRGBO(36, 150, 126, 1) ,
         toolbarHeight: 80,
-        leading: const Icon(Icons.arrow_back_ios_new,size: 40),
+        leading: const Icon(Icons.arrow_back_ios_new,size: 40,),
       ),
 
       body:
       Column(
         children:const [
-          BookMark(  ),
-          BookMark()
+          BookMark(verticalGardeningImg : 'assets/imgs/verticalGardening.png',
+            bookmarkHeading: "Vertical Gardening",
+            bookmarkText: "Lorem ipsum dolor sit amet, consectetur adipiscing"
+                " elit. In enim leo, rutrum fermentum feugiat ",),
+          BookMark(verticalGardeningImg: 'assets/imgs/articleImg.png',
+            bookmarkHeading: 'Compost',
+            bookmarkText:'abcde fghr hjryii sbgfjfkfjn',)
         ],
       ),
 

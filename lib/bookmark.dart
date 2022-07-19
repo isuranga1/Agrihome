@@ -1,20 +1,19 @@
 import 'package:flutter/material.dart';
 
-class BookMark extends StatefulWidget {
-  const BookMark({Key? key}) : super(key: key);
+class BookMark extends StatelessWidget {
 
-  @override
-  State<BookMark> createState() => _BookMarkState();
-}
+  final String bookmarkHeading;
+  final String verticalGardeningImg ;
+  final String bookmarkText;
 
-String vertical_gardening = 'assets/imgs/verticalGardening.png';
+  const  BookMark({required this.verticalGardeningImg,required this.bookmarkHeading,required this.bookmarkText});
 
-class _BookMarkState extends State<BookMark> {
+
   @override
   Widget build(BuildContext context) {
-    return Padding(
-        padding: const EdgeInsets.all(20),
-        child: Container(
+    return Padding (
+        padding: const  EdgeInsets.symmetric(vertical: 10,horizontal: 20),
+        child:Container(
           height: 150,
           width: 400,
           decoration: BoxDecoration(
@@ -24,22 +23,24 @@ class _BookMarkState extends State<BookMark> {
           child: Row(
             children: [
               Image(
-                image: AssetImage(vertical_gardening),
+                image: AssetImage(verticalGardeningImg),
                 height: 400,
                 width: 170,
               ),
               //SizedBox(width:30),
               Column(
-                  children:const[ Padding(
-                    padding: EdgeInsets.symmetric(horizontal: 3,vertical: 10),
-                    child:Text("Vertical Gardening",style: TextStyle(fontSize: 15)),
+                  children: [ Padding(
+                    padding: const EdgeInsets.symmetric(horizontal: 3, vertical: 10),
+                    child: Text(
+                        bookmarkHeading, style: const TextStyle(fontSize: 15)),
                   ),
                     Padding(
-                        padding:  EdgeInsets.all(10),
-                        child:SizedBox(
+                        padding: const EdgeInsets.all(10),
+                        child: SizedBox(
                           width: 180,
-                          child: Text("Lorem ipsum dolor sit amet, consectetur adipiscing"
-                              " elit. In enim leo, rutrum fermentum feugiat ",style: TextStyle(fontSize: 12), ),
+                          child: Text(
+                            bookmarkText,
+                            style: const TextStyle(fontSize: 12),),
 
                         ))
                   ]
