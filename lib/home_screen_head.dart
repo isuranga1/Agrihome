@@ -4,6 +4,7 @@ import 'package:agrihome/utils/colors.dart';
 import 'package:agrihome/widgets/small_text.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:agrihome/bookMarkPage.dart';
 
 class HomeScreenHead extends StatefulWidget {
   const HomeScreenHead({Key? key}) : super(key: key);
@@ -73,12 +74,21 @@ class _HomeScreenHeadState extends State<HomeScreenHead> {
                       style:
                           TextStyle(fontSize: 20, fontWeight: FontWeight.w500),
                     ),
-                    Text(
-                      "View All",
-                      style: TextStyle(
-                          color: AppColors.darkGreen,
-                          fontSize: 16,
-                          fontWeight: FontWeight.w400),
+                    GestureDetector(
+                      child: Text(
+                        "View All",
+                        style: TextStyle(
+                            color: AppColors.darkGreen,
+                            fontSize: 16,
+                            fontWeight: FontWeight.w400),
+                      ),
+                      onTap: () {
+                        Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) => BookMarkPage()));//######## temporary navigator ==> bookmark page
+                        ;
+                      },
                     ),
                   ],
                 ),
