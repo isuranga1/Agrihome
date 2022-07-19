@@ -10,19 +10,23 @@ class BookMarkPage extends StatefulWidget {
 class _BookMarkPageState extends State<BookMarkPage> {
   @override
   Widget build(BuildContext context) {
-    return  Scaffold(
+    return Scaffold(
       appBar: AppBar(
-        title:const Text('Bookmark',style: TextStyle(fontSize: 23,fontWeight: FontWeight.bold), ),
-        backgroundColor:const Color.fromRGBO(36, 150, 126, 1) ,
+        title: const Text(
+          'Bookmark',
+          style: TextStyle(fontSize: 23, fontWeight: FontWeight.bold),
+        ),
+        backgroundColor: const Color.fromRGBO(36, 150, 126, 1),
         toolbarHeight: 80,
-        leading: const Icon(Icons.arrow_back_ios_new,size: 40,),
+        leading: const Icon(
+          Icons.arrow_back_ios_new,
+          size: 40,
+        ),
       ),
-
-      body:
-      Padding(
+      body: Padding(
         padding: const EdgeInsets.only(top: 5),
         child: ListView.builder(
-          itemCount: 5,
+          itemCount: 10,
           itemBuilder: (context, index) {
             return Stack(
               children: [
@@ -34,25 +38,27 @@ class _BookMarkPageState extends State<BookMarkPage> {
                         borderRadius: BorderRadius.circular(15),
                         color: Color(0XFFE8F5E9)),
                     child: Padding(
-                      padding:
-                      const EdgeInsets.only(right: 20, left: 140),
+                      padding: const EdgeInsets.only(right: 20, left: 140),
                       child: Column(
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [
                           Row(
                             mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                            children:const  [
-                              Text("Vertical Gardening", style: TextStyle(color: Colors.black,
-                                  fontWeight: FontWeight.w500,
-                                  fontSize: 16),
+                            children: const [
+                              Text(
+                                "Vertical Gardening",
+                                style: TextStyle(
+                                    color: Colors.black,
+                                    fontWeight: FontWeight.w500,
+                                    fontSize: 16),
                               ),
                               Icon(Icons.bookmark_border,
-                                  size: 15,
-                                  color: Colors.green)
+                                  size: 15, color: Colors.green)
                             ],
                           ),
                           const SizedBox(height: 8),
-                          const Text(" to make compost at home How to make compost at home to make compost at home How to make compost at home",
+                          const Text(
+                            " to make compost at home How to make compost at home to make compost at home How to make compost at home",
                             maxLines: 3,
                             style: TextStyle(
                               color: Colors.black,
@@ -71,8 +77,7 @@ class _BookMarkPageState extends State<BookMarkPage> {
                         borderRadius: BorderRadius.circular(15),
                         image: DecorationImage(
                             fit: BoxFit.cover,
-                            image:
-                            AssetImage("assets/imgs/articleImg.png"))),
+                            image: AssetImage("assets/imgs/articleImg.png"))),
                   ),
                 ),
               ],
@@ -80,8 +85,6 @@ class _BookMarkPageState extends State<BookMarkPage> {
           },
         ),
       ),
-
-
     );
   }
 }
