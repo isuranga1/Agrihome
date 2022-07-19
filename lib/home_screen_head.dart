@@ -1,6 +1,6 @@
 import 'package:agrihome/categories.dart';
 import 'package:agrihome/home_screen_body.dart';
-import 'package:agrihome/utils/colors.dart';
+import 'package:agrihome/utils/appColors.dart';
 import 'package:agrihome/widgets/small_text.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
@@ -86,7 +86,8 @@ class _HomeScreenHeadState extends State<HomeScreenHead> {
                         Navigator.push(
                             context,
                             MaterialPageRoute(
-                                builder: (context) => BookMarkPage()));//######## temporary navigator ==> bookmark page
+                                builder: (context) =>
+                                    BookMarkPage())); //######## temporary navigator ==> bookmark page
                         ;
                       },
                     ),

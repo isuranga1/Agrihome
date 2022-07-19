@@ -1,4 +1,4 @@
-import 'package:agrihome/utils/colors.dart';
+import 'package:agrihome/utils/appColors.dart';
 import 'package:agrihome/utils/dimensions.dart';
 import 'package:agrihome/widgets/big_text.dart';
 import 'package:agrihome/widgets/small_text.dart';

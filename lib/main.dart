@@ -3,6 +3,8 @@ import 'package:agrihome/categories.dart';
 import 'package:agrihome/firstScreen.dart';
 import 'package:agrihome/home_screen_body.dart';
 import 'package:agrihome/market.dart';
+import 'package:agrihome/profile_settings.dart';
+import 'package:agrihome/publish_articles.dart';
 import 'package:flutter/material.dart';
 import 'bttmnavbar.dart';
 import 'home_screen_head.dart';
@@ -25,7 +27,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.green,
       ),
-      home: FirstScreen(),
+      home: BtmNavBar(),
     );
   }
 }
