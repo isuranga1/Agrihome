@@ -59,11 +59,18 @@ class _RegisterNowState extends State<RegisterNow> {
                   border: Border.all(color: Colors.black12),
                   borderRadius: BorderRadius.circular(15),
                 ),
-                child: const Padding(
-                  padding: EdgeInsets.only(left: 8),
+                child: Padding(
+                  padding: EdgeInsets.only(left: 0),
                   child: TextField(
                     decoration: InputDecoration(
-                      border: InputBorder.none,
+                      enabledBorder: OutlineInputBorder(
+                        borderSide: BorderSide(color: Colors.white),
+                        borderRadius: BorderRadius.circular(15),
+                      ),
+                      focusedBorder: OutlineInputBorder(
+                        borderSide: BorderSide(color: Colors.green),
+                        borderRadius: BorderRadius.circular(15),
+                      ),
                       hintText: "Your Name",
                     ),
                   ),
@@ -80,11 +87,18 @@ class _RegisterNowState extends State<RegisterNow> {
                   border: Border.all(color: Colors.black12),
                   borderRadius: BorderRadius.circular(15),
                 ),
-                child: const Padding(
-                  padding: EdgeInsets.only(left: 8),
+                child: Padding(
+                  padding: EdgeInsets.only(left: 0),
                   child: TextField(
                     decoration: InputDecoration(
-                      border: InputBorder.none,
+                      enabledBorder: OutlineInputBorder(
+                        borderSide: BorderSide(color: Colors.white),
+                        borderRadius: BorderRadius.circular(15),
+                      ),
+                      focusedBorder: OutlineInputBorder(
+                        borderSide: BorderSide(color: Colors.green),
+                        borderRadius: BorderRadius.circular(15),
+                      ),
                       hintText: "Email",
                     ),
                   ),
@@ -101,12 +115,18 @@ class _RegisterNowState extends State<RegisterNow> {
                   border: Border.all(color: Colors.black12),
                   borderRadius: BorderRadius.circular(15),
                 ),
-                child: const Padding(
-                  padding: EdgeInsets.only(left: 8),
+                child: Padding(
+                  padding: EdgeInsets.only(left: 0),
                   child: TextField(
-                    obscureText: true,
                     decoration: InputDecoration(
-                      border: InputBorder.none,
+                      enabledBorder: OutlineInputBorder(
+                        borderSide: BorderSide(color: Colors.white),
+                        borderRadius: BorderRadius.circular(15),
+                      ),
+                      focusedBorder: OutlineInputBorder(
+                        borderSide: BorderSide(color: Colors.green),
+                        borderRadius: BorderRadius.circular(15),
+                      ),
                       hintText: "Password",
                     ),
                   ),
@@ -123,12 +143,18 @@ class _RegisterNowState extends State<RegisterNow> {
                   border: Border.all(color: Colors.black12),
                   borderRadius: BorderRadius.circular(15),
                 ),
-                child: const Padding(
-                  padding: EdgeInsets.only(left: 8),
+                child: Padding(
+                  padding: EdgeInsets.only(left: 0),
                   child: TextField(
-                    obscureText: true,
                     decoration: InputDecoration(
-                      border: InputBorder.none,
+                      enabledBorder: OutlineInputBorder(
+                        borderSide: BorderSide(color: Colors.white),
+                        borderRadius: BorderRadius.circular(15),
+                      ),
+                      focusedBorder: OutlineInputBorder(
+                        borderSide: BorderSide(color: Colors.green),
+                        borderRadius: BorderRadius.circular(15),
+                      ),
                       hintText: "Confirm Password",
                     ),
                   ),
