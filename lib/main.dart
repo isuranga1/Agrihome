@@ -1,13 +1,16 @@
 import 'package:agrihome/Login_folder/LoginPage.dart';
-import 'package:agrihome/categories.dart';
+import 'package:agrihome/home_folder/categories.dart';
 import 'package:agrihome/firstScreen.dart';
-import 'package:agrihome/home_screen_body.dart';
-import 'package:agrihome/market.dart';
+import 'package:agrihome/home_folder/home_screen_body.dart';
+import 'package:agrihome/shop_folder/market.dart';
+import 'package:agrihome/profile_folder/profile_settings.dart';
+import 'package:agrihome/home_folder/publish_articles.dart';
 import 'package:flutter/material.dart';
+import 'home_folder/view_all_article_page.dart';
 import 'bttmnavbar.dart';
-import 'home_screen_head.dart';
+import 'home_folder/home_screen_head.dart';
 import 'package:get/get.dart';
-import 'articles.dart';
+import 'home_folder/articles.dart';
 
 void main() {
   runApp(const MyApp());
@@ -25,7 +28,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.green,
       ),
-      home: FirstScreen(),
+      home: LoginPage(),
     );
   }
 }

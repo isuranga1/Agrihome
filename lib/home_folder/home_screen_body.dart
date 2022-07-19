@@ -1,11 +1,11 @@
-import 'package:agrihome/utils/colors.dart';
+import 'package:agrihome/utils/appColors.dart';
 import 'package:agrihome/utils/dimensions.dart';
 import 'package:agrihome/widgets/big_text.dart';
 import 'package:agrihome/widgets/small_text.dart';
 import 'package:dots_indicator/dots_indicator.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:agrihome/articles.dart';
+import 'package:agrihome/home_folder/articles.dart';
 
 class HomeScreenBody extends StatefulWidget {
   const HomeScreenBody({Key? key}) : super(key: key);

@@ -1,7 +1,5 @@
 import 'dart:ui';
-
 import 'package:agrihome/bttmnavbar.dart';
-import 'package:agrihome/home_screen_head.dart';
 import 'package:flutter/material.dart';
 import 'package:agrihome/Login_folder/register_now.dart';
 import 'package:agrihome/Login_folder/forgotten_password.dart';

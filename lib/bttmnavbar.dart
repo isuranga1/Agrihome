@@ -1,6 +1,6 @@
-import 'package:agrihome/home_screen_head.dart';
-import 'package:agrihome/profile.dart';
-import 'package:agrihome/home_screen_body.dart';
+import 'package:agrihome/home_folder/home_screen_head.dart';
+import 'package:agrihome/profile_folder/profile.dart';
+import 'package:agrihome/home_folder/home_screen_body.dart';
 import 'package:flutter/material.dart';
 import 'package:fluentui_icons/fluentui_icons.dart';
 
