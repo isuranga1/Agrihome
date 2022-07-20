@@ -141,12 +141,16 @@ class _HomeScreenBodyState extends State<HomeScreenBody> {
                     margin: EdgeInsets.only(left: 40, right: 40, bottom: 20),
                     decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(15),
-                        color: Colors.white,
+                        color: Colors.white70,
                         boxShadow: [
                           BoxShadow(
                               color: Color(0xFFe8e8e8),
                               blurRadius: 5.0,
-                              offset: Offset(5, 7)),
+                              offset: Offset(7, 8)),
+                          BoxShadow(
+                              color: Color(0xFFe8e8e8),
+                              blurRadius: 5.0,
+                              offset: Offset(0, 0)),
                         ]),
                     child: Container(
                       padding: EdgeInsets.only(top: 15, left: 15, right: 15),

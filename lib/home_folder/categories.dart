@@ -9,14 +9,58 @@ class Categories extends StatefulWidget {
 }
 
 class _CategoriesState extends State<Categories> {
-  List<String> categories = ["Articles", "Discussions"];
+  //List<String> categories = ["Articles", "Discussions"];
   int selectedIndex = 0;
+  List<IconData> _icons = [Icons.article_outlined, Icons.chat_bubble_outline];
+
+  Widget _buildIcon(int index) {
+    return GestureDetector(
+      onTap: () {
+        setState(() {
+          selectedIndex = index;
+        });
+      },
+      child: Container(
+        height: 60.0,
+        width: 60.0,
+        decoration: BoxDecoration(
+          color: selectedIndex == index ? Colors.grey : Color(0xFFE7E8EE),
+          borderRadius: BorderRadius.circular(35),
+        ),
+        child: Icon(
+          _icons[index],
+          size: 25.0,
+          color: selectedIndex == index ? Colors.red : Color(0xFFB4C1C4),
+        ),
+      ),
+    );
+  }
+
   @override
   Widget build(BuildContext context) {
+    return Scaffold(
+      body: SafeArea(
+        child: ListView(
+          padding: EdgeInsets.symmetric(vertical: 30.0),
+          children: <Widget>[
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: <Widget>[
+                _buildIcon(0),
+                _buildIcon(1),
+              ],
+            ),
+          ],
+        ),
+      ),
+    );
+  }
+
+/*
     return Padding(
       padding: const EdgeInsets.symmetric(vertical: 25),
       child: SizedBox(
-        //height: 30,
+        height: 30,
         child: ListView.builder(
           scrollDirection: Axis.horizontal,
           itemCount: categories.length,
@@ -24,8 +68,9 @@ class _CategoriesState extends State<Categories> {
         ),
       ),
     );
-  }
+     */
 
+  /*
   Widget buildCategory(int index) {
     return GestureDetector(
       onTap: () {
@@ -56,4 +101,5 @@ class _CategoriesState extends State<Categories> {
       ),
     );
   }
+   */
 }
