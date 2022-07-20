@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'constants.dart';
-
 import 'categories.dart';
 import 'new_arrival_products.dart';
 import 'popular_products.dart';

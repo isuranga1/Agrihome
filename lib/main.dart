@@ -1,6 +1,8 @@
 import 'package:agrihome/Login_folder/LoginPage.dart';
 import 'package:agrihome/firstScreen.dart';
 import 'package:agrihome/home_folder/home_screen_body.dart';
+import 'package:agrihome/icon_in_container.dart';
+import 'package:agrihome/profile_folder/profile.dart';
 import 'package:agrihome/shop_folder/market.dart';
 import 'package:agrihome/profile_folder/profile_settings.dart';
 import 'package:agrihome/home_folder/publish_articles.dart';
@@ -30,7 +32,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.green,
       ),
-      home: HomeScreen(),
+      home: FirstScreen(),
     );
   }
 }

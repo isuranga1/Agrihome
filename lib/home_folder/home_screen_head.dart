@@ -66,10 +66,11 @@ class _HomeScreenHeadState extends State<HomeScreenHead> {
                 ],
               ),
             ),
+            //Categories(),
             Expanded(
                 child: SingleChildScrollView(
               child: HomeScreenBody(),
-            ))
+            )),
           ],
         ),
       ),

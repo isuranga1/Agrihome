@@ -146,7 +146,7 @@ class _HomeScreenBodyState extends State<HomeScreenBody> {
                           BoxShadow(
                               color: Color(0xFFe8e8e8),
                               blurRadius: 5.0,
-                              offset: Offset(7, 8)),
+                              offset: Offset(6, 7)),
                           BoxShadow(
                               color: Color(0xFFe8e8e8),
                               blurRadius: 5.0,
