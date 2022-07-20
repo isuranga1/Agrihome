@@ -118,6 +118,7 @@ class _RegisterNowState extends State<RegisterNow> {
                 child: Padding(
                   padding: EdgeInsets.only(left: 0),
                   child: TextField(
+                    obscureText: true,
                     decoration: InputDecoration(
                       enabledBorder: OutlineInputBorder(
                         borderSide: BorderSide(color: Colors.white),
@@ -146,6 +147,7 @@ class _RegisterNowState extends State<RegisterNow> {
                 child: Padding(
                   padding: EdgeInsets.only(left: 0),
                   child: TextField(
+                    obscureText: true,
                     decoration: InputDecoration(
                       enabledBorder: OutlineInputBorder(
                         borderSide: BorderSide(color: Colors.white),

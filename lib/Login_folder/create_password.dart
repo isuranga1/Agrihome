@@ -49,13 +49,20 @@ class _CreatePasswordState extends State<CreatePassword> {
                   border: Border.all(color: Colors.black12),
                   borderRadius: BorderRadius.circular(15),
                 ),
-                child: const Padding(
-                  padding: EdgeInsets.only(left: 8),
+                child: Padding(
+                  padding: EdgeInsets.only(left: 0),
                   child: TextField(
                     obscureText: true,
                     decoration: InputDecoration(
-                      border: InputBorder.none,
-                      hintText: "New password",
+                      enabledBorder: OutlineInputBorder(
+                        borderSide: BorderSide(color: Colors.white),
+                        borderRadius: BorderRadius.circular(15),
+                      ),
+                      focusedBorder: OutlineInputBorder(
+                        borderSide: BorderSide(color: Colors.green),
+                        borderRadius: BorderRadius.circular(15),
+                      ),
+                      hintText: "New Password",
                     ),
                   ),
                 ),
@@ -78,13 +85,20 @@ class _CreatePasswordState extends State<CreatePassword> {
                   border: Border.all(color: Colors.black12),
                   borderRadius: BorderRadius.circular(15),
                 ),
-                child: const Padding(
-                  padding: EdgeInsets.only(left: 8),
+                child: Padding(
+                  padding: EdgeInsets.only(left: 0),
                   child: TextField(
                     obscureText: true,
                     decoration: InputDecoration(
-                      border: InputBorder.none,
-                      hintText: "Confirm new password",
+                      enabledBorder: OutlineInputBorder(
+                        borderSide: BorderSide(color: Colors.white),
+                        borderRadius: BorderRadius.circular(15),
+                      ),
+                      focusedBorder: OutlineInputBorder(
+                        borderSide: BorderSide(color: Colors.green),
+                        borderRadius: BorderRadius.circular(15),
+                      ),
+                      hintText: "Confirm Password",
                     ),
                   ),
                 ),
