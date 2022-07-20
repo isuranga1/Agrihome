@@ -17,7 +17,7 @@ class Product {
 
 List<Product> demo_product = [
   Product(
-    image: "assets/images/product_0.png",
+    image: "assets/imgs/product_0.png",
     title: "Canas",
     price: 165,
     description:
@@ -28,7 +28,7 @@ List<Product> demo_product = [
     bgColor: const Color(0xFFFEFBF9),
   ),
   Product(
-    image: "assets/images/product_1.png",
+    image: "assets/imgs/product_1.png",
     title: "Red Anthurium",
     price: 99,
     description:
@@ -38,7 +38,7 @@ List<Product> demo_product = [
                 '\nAnthurium also needs well drained soil.',
   ),
   Product(
-    image: "assets/images/product_2.png",
+    image: "assets/imgs/product_2.png",
     title: "Orchid",
     price: 180,
     description:
@@ -49,7 +49,7 @@ List<Product> demo_product = [
     bgColor: const Color(0xFFF8FEFB),
   ),
   Product(
-    image: "assets/images/product_3.png",
+    image: "assets/imgs/product_3.png",
     title: "White orchid",
     price: 149,
     description:

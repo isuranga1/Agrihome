@@ -5,6 +5,8 @@ import 'package:agrihome/shop_folder/market.dart';
 import 'package:agrihome/profile_folder/profile_settings.dart';
 import 'package:agrihome/home_folder/publish_articles.dart';
 import 'package:flutter/material.dart';
+import 'Marketplace/home_screen.dart';
+import 'Marketplace/constants.dart';
 
 import 'home_folder/categories.dart';
 import 'Marketplace/home_screen.dart';
@@ -28,7 +30,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.green,
       ),
-      home: Categories(),
+      home: HomeScreen(),
     );
   }
 }
