@@ -15,6 +15,7 @@ class _HomeScreenHeadState extends State<HomeScreenHead> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      //backgroundColor: Color(0xFFeeedf2),
       body: Container(
         child: Column(
           children: [

@@ -92,14 +92,17 @@ flutter:
 
   assets:
     - assets/imgs/
-    - assets/imgs/icons/
-    - assets/imgs/images/
+    - assets/icons/
 
-  # fonts:
-  #   - family: Schyler
-  #     fonts:
-  #       - asset: fonts/Schyler-Regular.ttf
-  #       - asset: fonts/Schyler-Italic.ttf
+  fonts:
+    - family: Gordita
+      fonts:
+        - asset: assets/fonts/Gordita_Bold.otf
+        - asset: assets/fonts/Gordita_Light.otf
+        - asset: assets/fonts/Gordita_Medium.otf
+        - asset: assets/fonts/Gordita_Regular.otf
+        - asset: assets/fonts/Gordita_Thin.otf
+
   #         style: italic
   #   - family: Trajan Pro
   #     fonts:
