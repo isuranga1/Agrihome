@@ -16,7 +16,7 @@ class NewArrivalProducts extends StatelessWidget {
     return Column(
       children: [
         Padding(
-          padding: const EdgeInsets.symmetric(vertical: defaultPadding),
+          padding: const EdgeInsets.symmetric(vertical: defaultPadding * 0.3),
           child: SectionTitle(
             title: "Recommended",
             pressSeeAll: () {},
