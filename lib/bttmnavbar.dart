@@ -1,3 +1,4 @@
+import 'package:agrihome/Marketplace/home_screen.dart';
 import 'package:agrihome/home_folder/home_screen_head.dart';
 import 'package:agrihome/profile_folder/profile.dart';
 import 'package:agrihome/home_folder/home_screen_body.dart';
@@ -48,7 +49,7 @@ class _BtmNavBarState extends State<BtmNavBar> {
   static final List<Widget> _widgetOptions = <Widget>[
     HomeScreenHead(),
     const Text("Gallery"),
-    const Text("Plant Shopping"),
+    HomeScreen(), //marketplace
     Profile(),
   ];
 
