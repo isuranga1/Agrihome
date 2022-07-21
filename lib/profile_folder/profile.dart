@@ -29,9 +29,8 @@ class _ProfileState extends State<Profile> {
                   begin: Alignment.topCenter, //begin of the gradient color
                   end: Alignment.bottomLeft, //end of the gradient color
                 ),
-                image: DecorationImage(
-                    fit: BoxFit.cover,
-                    image: AssetImage("assets/imgs/personProfilePic.png"))),
+
+            ),
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.center,
               mainAxisAlignment: MainAxisAlignment.center,
@@ -42,6 +41,9 @@ class _ProfileState extends State<Profile> {
                   decoration: BoxDecoration(
                     shape: BoxShape.circle,
                     color: Colors.grey,
+                    image: DecorationImage(
+                      fit: BoxFit.cover,
+                      image: AssetImage("assets/imgs/personProfilePic.png"))
                   ),
                 ),
                 SizedBox(
@@ -72,6 +74,145 @@ class _ProfileState extends State<Profile> {
               borderRadius: BorderRadius.circular(55), //border corner radius
               color: Colors.white,
             ),
+            child: Column(
+                crossAxisAlignment: CrossAxisAlignment.center,
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Row(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      crossAxisAlignment: CrossAxisAlignment.center,
+                      children: [
+                        Icon(
+                          Icons.bookmark,
+                          size: 18.0,
+                          color:AppColors.darkGreen,
+                        ),
+                        SizedBox(width: 10,),
+                        Text("Bookmark         ",style: TextStyle(
+                            fontSize: 15,
+                            color: Colors.black,
+                            fontWeight: FontWeight.normal)),
+                        SizedBox(width: 20,),
+                        Icon(
+                          Icons.arrow_forward_ios,
+                          size: 18.0,
+                          color: AppColors.darkGreen,
+                        )
+                      ]),
+                  Row(mainAxisAlignment: MainAxisAlignment.center,
+                    crossAxisAlignment: CrossAxisAlignment.center,
+                    children: [SizedBox(height: 5,)],
+
+                  ),
+                  Row(mainAxisAlignment: MainAxisAlignment.center,
+                    crossAxisAlignment: CrossAxisAlignment.center,
+                    children: [Container(
+                      height:1,
+                      width: 200,
+                      decoration: BoxDecoration(color: Colors.black,shape:BoxShape.rectangle),
+                    )],),
+                  Row(mainAxisAlignment: MainAxisAlignment.center,
+                    crossAxisAlignment: CrossAxisAlignment.center,
+                    children: [SizedBox(height: 10,)],),
+                  Row(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      crossAxisAlignment: CrossAxisAlignment.center,
+                      children: [
+                        Icon(
+                          Icons.shopping_cart,
+                          size: 18.0,
+                          color: AppColors.darkGreen,
+                        ),
+                        SizedBox(width: 10,),
+                        Text("My Cart             ",style: TextStyle(
+                            fontSize: 15,
+                            color: Colors.black,
+                            fontWeight: FontWeight.normal)),
+                        SizedBox(width: 20,),
+                        Icon(
+                          Icons.arrow_forward_ios,
+                          size: 18.0,
+                          color: AppColors.darkGreen,
+                        )]),
+                  Row(mainAxisAlignment: MainAxisAlignment.center,
+                    crossAxisAlignment: CrossAxisAlignment.center,
+                    children: [SizedBox(height: 5,)],),
+                  Row(mainAxisAlignment: MainAxisAlignment.center,
+                    crossAxisAlignment: CrossAxisAlignment.center,
+                    children: [Container(
+                      height:1,
+                      width: 200,
+                      decoration: BoxDecoration(color: Colors.black,shape:BoxShape.rectangle),
+                    )],),
+                  Row(mainAxisAlignment: MainAxisAlignment.center,
+                    crossAxisAlignment: CrossAxisAlignment.center,
+                    children: [SizedBox(height: 10,)],),
+                  Row(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      crossAxisAlignment: CrossAxisAlignment.center,
+                      children: [
+                        Icon(
+                          Icons.key,
+                          size: 18.0,
+                          color: AppColors.darkGreen,
+                        ),
+                        SizedBox(width: 10,),
+                        Text("Profile Settings",style: TextStyle(
+                            fontSize: 15,
+                            color: Colors.black,
+                            fontWeight: FontWeight.normal)),
+                        SizedBox(width: 20,),
+                        Icon(
+                          Icons.arrow_forward_ios,
+                          size: 18.0,
+                          color: AppColors.darkGreen,
+                        )]),
+                  Row(mainAxisAlignment: MainAxisAlignment.center,
+                    crossAxisAlignment: CrossAxisAlignment.center,
+                    children: [SizedBox(height: 5,)],),
+                  Row(mainAxisAlignment: MainAxisAlignment.center,
+                    crossAxisAlignment: CrossAxisAlignment.center,
+                    children: [Container(
+                      height:1,
+                      width: 200,
+                      decoration: BoxDecoration(color: Colors.black,shape:BoxShape.rectangle),
+                    )],),
+                  Row(mainAxisAlignment: MainAxisAlignment.center,
+                    crossAxisAlignment: CrossAxisAlignment.center,
+                    children: [SizedBox(height: 10,)],),
+                  Row(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      crossAxisAlignment: CrossAxisAlignment.center,
+                      children: [
+                        Icon(
+                          Icons.logout,
+                          size: 18.0,
+                          color: AppColors.darkGreen,
+                        ),
+                        SizedBox(width: 10,),
+                        Text("Sign Out            ",style: TextStyle(
+                            fontSize: 15,
+                            color: Colors.black,
+                            fontWeight: FontWeight.normal)),
+                        SizedBox(width: 20,),
+                        Icon(
+                          Icons.arrow_forward_ios,
+                          size: 18.0,
+                          color: AppColors.darkGreen,
+                        )]),
+                  Row(mainAxisAlignment: MainAxisAlignment.center,
+                    crossAxisAlignment: CrossAxisAlignment.center,
+                    children: [SizedBox(height: 5,)],),
+                  Row(mainAxisAlignment: MainAxisAlignment.center,
+                    crossAxisAlignment: CrossAxisAlignment.center,
+                    children: [Container(
+                      height:1,
+                      width: 200,
+                      decoration: BoxDecoration(color: Color.fromARGB(255, 0, 0, 0),shape:BoxShape.rectangle),
+
+                    )],),
+
+                ]),
           ),
         ),
       ]),
