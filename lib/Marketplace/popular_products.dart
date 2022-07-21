@@ -17,7 +17,7 @@ class PopularProducts extends StatelessWidget {
         Padding(
           padding: const EdgeInsets.symmetric(vertical: defaultPadding),
           child: SectionTitle(
-            title: "Popular",
+            title: "Featured",
             pressSeeAll: () {},
           ),
         ),
