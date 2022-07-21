@@ -30,53 +30,53 @@ class _PublishArticlesState extends State<PublishArticles> {
             ),
             onPressed: () => BtmNavBar()),
       ),
-      body: Column(
-        children: [
-          Container(
-            margin: EdgeInsets.only(top: 13, left: 13, bottom: 10, right: 13),
-            decoration: BoxDecoration(
-                borderRadius: BorderRadius.circular(15),
-                color: Color(0XFFE8F5E9)),
-            child: Padding(
-              padding: const EdgeInsets.all(12.0),
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  //Name of the Article
-                  TextLine("Name of the article :-", 10), //  new method
-                  SizedBox(
-                    height: 30,
-                  ),
-                  // Original Author
-                  TextLine("Original Author :-", 40), // new method
-                  SizedBox(
-                    height: 30,
-                  ),
-                  TextLine("Source :-", 10), // new method
-                  SizedBox(
-                    height: 20,
-                  ),
-                  Row(
-                    children: [
-                      Text(
-                        "Write here :-",
-                        style: TextStyle(
-                            color: Colors.black,
-                            fontWeight: FontWeight.w400,
-                            fontSize: 16),
-                      ),
-
-                    ],
-                  ),
-                  SizedBox(
-                    height: 10,
-                  ),
-                  LayoutBuilder(
-                      builder: (context, constraints) =>  SizedBox(
-                            height: 350,
-                            child: TextField(
-                              expands: true,
-                              decoration: InputDecoration(
+      body: SingleChildScrollView(
+        child: Column(
+          children: [
+            Container(
+              margin: EdgeInsets.only(top: 13, left: 13, bottom: 10, right: 13),
+              decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(15),
+                  color: Color(0XFFE8F5E9)),
+              child: Padding(
+                padding: const EdgeInsets.all(12.0),
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    //Name of the Article
+                    TextLine("Name of the article :-", 10), //  new method
+                    SizedBox(
+                      height: 30,
+                    ),
+                    // Original Author
+                    TextLine("Original Author :-", 40), // new method
+                    SizedBox(
+                      height: 30,
+                    ),
+                    TextLine("Source :-", 10), // new method
+                    SizedBox(
+                      height: 20,
+                    ),
+                    Row(
+                      children: [
+                        Text(
+                          "Write here :-",
+                          style: TextStyle(
+                              color: Colors.black,
+                              fontWeight: FontWeight.w600,
+                              fontSize: 16),
+                        ),
+                      ],
+                    ),
+                    SizedBox(
+                      height: 10,
+                    ),
+                    LayoutBuilder(
+                        builder: (context, constraints) => SizedBox(
+                              height: 350,
+                              child: TextField(
+                                expands: true,
+                                decoration: InputDecoration(
                                   filled: true,
                                   fillColor: Colors.white,
                                   enabledBorder: OutlineInputBorder(
@@ -84,37 +84,37 @@ class _PublishArticlesState extends State<PublishArticles> {
                                     gapPadding: 20,
                                     borderRadius: BorderRadius.circular(15),
                                   ),
-
-                                  ),
-                              maxLines: null,
-                              minLines: null,
-                            ),
-                          )),
-                ],
-              ),
-            ),
-          ),
-          Container(
-            margin: EdgeInsets.only(bottom: 5, left: 13, right: 13),
-            height: 35,
-            decoration: BoxDecoration(
-                borderRadius: BorderRadius.circular(100),
-                gradient: LinearGradient(colors: [
-                  AppColors.darkGreen,
-                  AppColors.lightGreen,
-                ], begin: Alignment.centerRight, end: Alignment.centerLeft)),
-            child: Center(
-              child: Text(
-                "Publish",
-                style: TextStyle(
-                  fontSize: 17,
-                  fontWeight: FontWeight.bold,
-                  color: Colors.white,
+                                ),
+                                maxLines: null,
+                                minLines: null,
+                              ),
+                            )),
+                  ],
                 ),
               ),
             ),
-          ),
-        ],
+            Container(
+              margin: EdgeInsets.only(bottom: 5, left: 13, right: 13),
+              height: 35,
+              decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(100),
+                  gradient: LinearGradient(colors: [
+                    AppColors.darkGreen,
+                    AppColors.lightGreen,
+                  ], begin: Alignment.centerRight, end: Alignment.centerLeft)),
+              child: Center(
+                child: Text(
+                  "Publish",
+                  style: TextStyle(
+                    fontSize: 17,
+                    fontWeight: FontWeight.bold,
+                    color: Colors.white,
+                  ),
+                ),
+              ),
+            ),
+          ],
+        ),
       ),
     );
   }
@@ -125,7 +125,7 @@ class _PublishArticlesState extends State<PublishArticles> {
         Text(
           topic,
           style: TextStyle(
-              color: Colors.black, fontWeight: FontWeight.w400, fontSize: 16),
+              color: Colors.black, fontWeight: FontWeight.w600, fontSize: 16),
         ),
         SizedBox(
           width: sizedBoxWidth,
