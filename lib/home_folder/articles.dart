@@ -35,7 +35,7 @@ class _ArticlePageState extends State<ArticlePage> {
       '(unless you want it to), it will work just about anywhere, and plants will actually grow'
       ' faster than if you were growing in-ground. It’s not hard to see why hydroponic gardening is'
       ' fast becoming a popular way to grow plants everywhere from kitchen counters to university '
-      'dining halls !';
+      'dining halls  !                                                               ' *2;
   String img = 'assets/imgs/articleImg.png';
   @override
   Widget build(BuildContext context) {
@@ -131,12 +131,16 @@ class _ArticlePageState extends State<ArticlePage> {
             ),
 
             // Article content
-            Padding(
+
+            Expanded(child:SingleChildScrollView(
+                child: Padding(
               padding: EdgeInsets.symmetric(horizontal: 20, vertical: 10),
               child: Text(
-                content,
+                content ,
                 style: TextStyle(fontSize: 15),
               ),
+            )
+            )
             ),
           ],
         ),
