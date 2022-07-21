@@ -73,6 +73,7 @@ class _PublishArticlesState extends State<PublishArticles> {
                     height: 10,
                   ),
                   TextField(
+
                     decoration: InputDecoration(
                         filled: true,
                         fillColor: Colors.white,
@@ -86,7 +87,7 @@ class _PublishArticlesState extends State<PublishArticles> {
                           borderRadius: BorderRadius.circular(15),
                         ),
                         labelText: "write here"),
-                    maxLines: 4,
+                    maxLines: 5,
                     minLines: 1,
                   )
                 ],
@@ -131,7 +132,7 @@ class _PublishArticlesState extends State<PublishArticles> {
         ),
         Expanded(
             child: TextField(
-          decoration: InputDecoration(
+              decoration: InputDecoration(
             filled: true,
             fillColor: Colors.white,
             enabledBorder: OutlineInputBorder(
