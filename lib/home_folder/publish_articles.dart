@@ -1,3 +1,4 @@
+
 import 'package:agrihome/utils/appColors.dart';
 import 'package:flutter/material.dart';
 import 'package:agrihome/bttmnavbar.dart';
@@ -23,12 +24,11 @@ class _PublishArticlesState extends State<PublishArticles> {
         //toolbarHeight: 50.0,
         foregroundColor: Colors.white,
         leading: IconButton(
-          icon: Icon(
-            Icons.arrow_back_ios,
-            size: 19,
-          ),
-          onPressed: () => BtmNavBar(),
-        ),
+            icon: Icon(
+              Icons.arrow_back_ios,
+              size: 19,
+            ),
+            onPressed: () => BtmNavBar()),
       ),
       body: Column(
         children: [
@@ -42,50 +42,54 @@ class _PublishArticlesState extends State<PublishArticles> {
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
+                  //Name of the Article
+                  TextLine("Name of the article :-", 10), //  new method
+                  SizedBox(
+                    height: 30,
+                  ),
+                  // Original Author
+                  TextLine("Original Author :-", 40),// new method
+                  SizedBox(
+                    height: 30,
+                  ),
+                  TextLine("Source :-", 10),// new method
+                  SizedBox(
+                    height: 20,
+                  ),
                   Row(
                     children: [
                       Text(
-                        "Name of the article",
+                        "Write here :-",
                         style: TextStyle(
                             color: Colors.black,
                             fontWeight: FontWeight.w400,
                             fontSize: 16),
                       ),
-                    ],
-                  ),
-                  Row(
-                    children: [
-                      Text(
-                        "Original Author",
-                        style: TextStyle(
-                            color: Colors.black,
-                            fontWeight: FontWeight.w400,
-                            fontSize: 16),
+                      SizedBox(
+                        width: 10,
                       ),
                     ],
                   ),
-                  Row(
-                    children: [
-                      Text(
-                        "Source",
-                        style: TextStyle(
-                            color: Colors.black,
-                            fontWeight: FontWeight.w400,
-                            fontSize: 16),
-                      ),
-                    ],
+                  SizedBox(
+                    height: 10,
                   ),
-                  Row(
-                    children: [
-                      Text(
-                        "Write here",
-                        style: TextStyle(
-                            color: Colors.black,
-                            fontWeight: FontWeight.w400,
-                            fontSize: 16),
-                      ),
-                    ],
-                  ),
+                  TextField(
+                    decoration: InputDecoration(
+                        filled: true,
+                        fillColor: Colors.white,
+                        enabledBorder: OutlineInputBorder(
+                          borderSide: BorderSide(color: Colors.white),
+                          gapPadding: 20,
+                          borderRadius: BorderRadius.circular(15),
+                        ),
+                        focusedBorder: OutlineInputBorder(
+                          borderSide: BorderSide(color: Colors.white),
+                          borderRadius: BorderRadius.circular(15),
+                        ),
+                        labelText: "write here"),
+                    maxLines: 4,
+                    minLines: 1,
+                  )
                 ],
               ),
             ),
@@ -112,6 +116,37 @@ class _PublishArticlesState extends State<PublishArticles> {
           ),
         ],
       ),
+    );
+  }
+
+   TextLine(String topic, double sizedBoxWidth) {
+    return Row(
+      children: [
+        Text(
+          topic,
+          style: TextStyle(
+              color: Colors.black, fontWeight: FontWeight.w400, fontSize: 16),
+        ),
+        SizedBox(
+          width: sizedBoxWidth,
+        ),
+        Expanded(
+            child: TextField(
+          decoration: InputDecoration(
+            filled: true,
+            fillColor: Colors.white,
+            enabledBorder: OutlineInputBorder(
+              borderSide: BorderSide(color: Colors.white),
+              gapPadding: 20,
+              borderRadius: BorderRadius.circular(15),
+            ),
+            focusedBorder: OutlineInputBorder(
+              borderSide: BorderSide(color: Colors.white),
+              borderRadius: BorderRadius.circular(15),
+            ),
+          ),
+        ))
+      ],
     );
   }
 }

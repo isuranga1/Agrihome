@@ -6,6 +6,7 @@ import 'package:dots_indicator/dots_indicator.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:agrihome/home_folder/articles.dart';
+import 'package:agrihome/home_folder/publish_articles.dart';
 
 class HomeScreenBody extends StatefulWidget {
   const HomeScreenBody({Key? key}) : super(key: key);
@@ -128,7 +129,8 @@ class _HomeScreenBodyState extends State<HomeScreenBody> {
             ),
             onTap: () {
               Navigator.push(context,
-                  MaterialPageRoute(builder: (context) => ArticlePage()));
+                  MaterialPageRoute(builder: (context) => PublishArticles())//ArticlePage())
+              );
               ;
             },
           ),
@@ -146,7 +148,7 @@ class _HomeScreenBodyState extends State<HomeScreenBody> {
                           BoxShadow(
                               color: Color(0xFFe8e8e8),
                               blurRadius: 5.0,
-                              offset: Offset(7, 8)),
+                              offset: Offset(6, 7)),
                           BoxShadow(
                               color: Color(0xFFe8e8e8),
                               blurRadius: 5.0,
@@ -188,7 +190,8 @@ class _HomeScreenBodyState extends State<HomeScreenBody> {
               ),
               onTap: () {
                 Navigator.push(context,
-                    MaterialPageRoute(builder: (context) => ArticlePage()));
+                    MaterialPageRoute(builder: (context) => ArticlePage()) //PublishArticles())
+                );
                 ;
               })
         ],
