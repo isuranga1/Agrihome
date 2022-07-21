@@ -1,4 +1,3 @@
-
 import 'package:agrihome/utils/appColors.dart';
 import 'package:flutter/material.dart';
 import 'package:agrihome/bttmnavbar.dart';
