@@ -15,6 +15,17 @@ class _PublishArticlesState extends State<PublishArticles> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        /*flexibleSpace: Container(
+          decoration:BoxDecoration(
+              gradient:LinearGradient(
+                  colors: [
+                AppColors.darkGreen,
+                AppColors.lightGreen,
+              ], begin: Alignment.centerRight, end: Alignment.centerLeft
+
+              )
+          )
+        ),*/
         title: const Text(
           "Publish Articles",
           style: TextStyle(
@@ -34,10 +45,10 @@ class _PublishArticlesState extends State<PublishArticles> {
         child: Column(
           children: [
             Container(
-              margin: EdgeInsets.only(top: 13, left: 13, bottom: 10, right: 13),
+              margin: EdgeInsets.only(top: 13, left: 13, bottom: 5, right: 13),
               decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(15),
-                  color: Color(0XFFE8F5E9)),
+                  color:Color(0XFFE8F5E9)),
               child: Padding(
                 padding: const EdgeInsets.all(12.0),
                 child: Column(
@@ -94,14 +105,17 @@ class _PublishArticlesState extends State<PublishArticles> {
               ),
             ),
             Container(
-              margin: EdgeInsets.only(bottom: 5, left: 13, right: 13),
-              height: 35,
+              margin: EdgeInsets.only(bottom: 1, left: 13, right: 13),
+              height: 45,
               decoration: BoxDecoration(
+                color: AppColors.darkGreen,
                   borderRadius: BorderRadius.circular(100),
-                  gradient: LinearGradient(colors: [
+                 /* gradient: LinearGradient(colors: [
                     AppColors.darkGreen,
                     AppColors.lightGreen,
-                  ], begin: Alignment.centerRight, end: Alignment.centerLeft)),
+                  ], begin: Alignment.centerRight, end: Alignment.centerLeft)*/
+                  ),
+
               child: Center(
                 child: Text(
                   "Publish",

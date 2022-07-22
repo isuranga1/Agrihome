@@ -190,7 +190,7 @@ class _HomeScreenBodyState extends State<HomeScreenBody> {
               ),
               onTap: () {
                 Navigator.push(context,
-                    MaterialPageRoute(builder: (context) => ArticlePage())//PublishArticles()) //
+                    MaterialPageRoute(builder: (context) => PublishArticles()) //ArticlePage())//
                 );
                 ;
               })
