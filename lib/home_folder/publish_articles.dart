@@ -46,7 +46,7 @@ class _PublishArticlesState extends State<PublishArticles> {
         child: Column(
           children: [
             Container(
-              margin: EdgeInsets.only(top: 13, left: 13, bottom: 5, right: 13),
+              margin: EdgeInsets.only(top: 13, left: 13, bottom: 10, right: 13),
               decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(15),
                   color:Color.fromARGB(100,34, 135, 105)),
