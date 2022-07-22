@@ -1,9 +1,11 @@
 import 'package:flutter/material.dart';
 import 'constants.dart';
+
+import 'appColors.dart';
+
 import 'categories.dart';
 import 'new_arrival_products.dart';
 import 'popular_products.dart';
-import 'search_form.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({Key? key}) : super(key: key);
@@ -11,56 +13,73 @@ class HomeScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        leading: IconButton(
-          onPressed: () {},
-          icon: Image.asset("assets/icons/menu.png"),
-        ),
-        title: Row(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            Image.asset("assets/icons/Location.png"),
-            const SizedBox(width: defaultPadding / 2),
-            Text(
-              "15/2 Colombo",
-              style: Theme.of(context).textTheme.bodyText1,
-            ),
-          ],
-        ),
-        actions: [
-          IconButton(
-            icon: Image.asset("assets/icons/Notification.png"),
-            onPressed: () {},
+        body: Column(children: [
+      Container(
+          child: Column(children: [
+        Container(
+          margin: EdgeInsets.only(top: 80, right: 20, left: 20, bottom: 0),
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              //showing welcome text
+              Text(
+                "Explore",
+                style: TextStyle(
+                  fontSize: 23,
+                  fontWeight: FontWeight.bold,
+                  color: AppColors.darkGreen,
+                ),
+              ),
+              SizedBox(
+                height: 14.0,
+              ),
+              //showing search bar
+              SizedBox(
+                height: 40,
+                child: TextFormField(
+                  decoration: InputDecoration(
+                      filled: true,
+                      fillColor: AppColors.darkGreen.withOpacity(0.15),
+                      contentPadding: EdgeInsets.fromLTRB(5, 5, 5, 5),
+                      border: OutlineInputBorder(
+                        borderRadius: BorderRadius.circular(10),
+                        borderSide: BorderSide.none,
+                      ),
+                      hintText: 'Search Here',
+                      hintStyle: TextStyle(
+                          color: Colors.black.withOpacity(0.4), fontSize: 19),
+                      prefixIcon: Icon(
+                        Icons.search,
+                        size: 21,
+                      ),
+                      prefixIconColor: Colors.black.withOpacity(0.1)),
+                ),
+              ),
+              //add space for vertical selection
+              SizedBox(
+                height: 10.0,
+              ),
+            ],
           ),
-        ],
-      ),
-      body: SingleChildScrollView(
-        physics: const BouncingScrollPhysics(
-            parent: AlwaysScrollableScrollPhysics()),
-        padding: const EdgeInsets.all(defaultPadding),
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            Text(
-              "Explore",
-              style: Theme.of(context).textTheme.headline4!.copyWith(
-                  fontWeight: FontWeight.w500,
-                  color: Color.fromARGB(255, 26, 121, 105)),
-            ),
-            const Text(
-              "Best Products For You",
-              style: TextStyle(fontSize: 18),
-            ),
-            const Padding(
-              padding: EdgeInsets.symmetric(vertical: defaultPadding),
-              child: SearchForm(),
-            ),
-            const Categories(),
-            const NewArrivalProducts(),
-            const PopularProducts(),
-          ],
         ),
-      ),
-    );
+        SingleChildScrollView(
+          physics: const BouncingScrollPhysics(
+              parent: AlwaysScrollableScrollPhysics()),
+          padding: const EdgeInsets.only(
+              left: defaultPadding,
+              right: defaultPadding,
+              top: defaultPadding / 2,
+              bottom: 0),
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              const Categories(),
+              const NewArrivalProducts(),
+              const PopularProducts(),
+            ],
+          ),
+        ),
+      ]))
+    ]));
   }
 }
