@@ -2,6 +2,7 @@ import 'package:agrihome/utils/appColors.dart';
 import 'package:flutter/material.dart';
 import 'package:agrihome/bttmnavbar.dart';
 import 'package:flutter/rendering.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 class PublishArticles extends StatefulWidget {
   const PublishArticles({Key? key}) : super(key: key);
@@ -48,7 +49,7 @@ class _PublishArticlesState extends State<PublishArticles> {
               margin: EdgeInsets.only(top: 13, left: 13, bottom: 5, right: 13),
               decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(15),
-                  color:Color(0XFFE8F5E9)),
+                  color:Color.fromARGB(100,34, 135, 105)),
               child: Padding(
                 padding: const EdgeInsets.all(12.0),
                 child: Column(
@@ -57,14 +58,14 @@ class _PublishArticlesState extends State<PublishArticles> {
                     //Name of the Article
                     TextLine("Name of the article :-", 10), //  new method
                     SizedBox(
-                      height: 30,
+                      height: 20,
                     ),
                     // Original Author
                     TextLine("Original Author :-", 40), // new method
                     SizedBox(
-                      height: 30,
+                      height: 20,
                     ),
-                    TextLine("Source :-", 10), // new method
+                    TextLine("Source :-", 50), // new method
                     SizedBox(
                       height: 20,
                     ),
@@ -72,9 +73,9 @@ class _PublishArticlesState extends State<PublishArticles> {
                       children: [
                         Text(
                           "Write here :-",
-                          style: TextStyle(
+                          style: GoogleFonts.ubuntuMono(
                               color: Colors.black,
-                              fontWeight: FontWeight.w600,
+                              fontWeight: FontWeight.w900,
                               fontSize: 16),
                         ),
                       ],
@@ -138,8 +139,8 @@ class _PublishArticlesState extends State<PublishArticles> {
       children: [
         Text(
           topic,
-          style: TextStyle(
-              color: Colors.black, fontWeight: FontWeight.w600, fontSize: 16),
+          style: GoogleFonts.ubuntuMono(
+              color: Colors.black, fontWeight: FontWeight.w900, fontSize: 16,),
         ),
         SizedBox(
           width: sizedBoxWidth,
