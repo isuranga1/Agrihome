@@ -1,3 +1,7 @@
+# AgriHome
+
+![Rectangle 36](https://github.com/isuranga1/agrihome/assets/109301978/8c2a83f3-bd19-457b-b338-6864ccc8fd73)
+
 **Introducing AgriHome: Cultivate Your Green Thumb with Efficiency and Community**
 
 Welcome to AgriHome, the all-in-one gardening app designed to elevate your gardening experience to new heights. Embrace the joy of gardening as you immerse yourself in a vibrant ecosystem that empowers you to buy and sell plants, share your botanical expertise, and forge meaningful connections with a thriving gardening community.
