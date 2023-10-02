@@ -29,3 +29,5 @@ Welcome to AgriHome, the all-in-one gardening app designed to elevate your garde
 4. **Continuous Innovation:** Our team is dedicated to regular updates and improvements, ensuring AgriHome stays at the forefront of gardening technology. With every update, we strive to provide new features that cater to your evolving gardening needs.
 
 Embark on a gardening adventure like never before with AgriHome. Download the app now and witness a transformational journey into the mesmerizing world of plants and the vibrant gardening community. Let's grow together, one green step at a time. 🌿🌱🌻
+
+Just editing to see whether the cloning thing is working!!
